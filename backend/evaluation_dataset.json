@@ -1,0 +1,100 @@
+{
+  "description": "Ground-truth evaluation benchmark for Intelligent TB Guideline Analysis",
+  "version": "1.0",
+  "queries": [
+    {
+      "id": "q1",
+      "query": "What are the major objectives of PMDT under the National Strategic Plan?",
+      "category": "Programme Objectives",
+      "ground_truth": {
+        "2017": [46, 15, 47],
+        "2016": [3, 4]
+      }
+    },
+    {
+      "id": "q2",
+      "query": "What are the eligibility criteria for BPaLM treatment regimen?",
+      "category": "Treatment Regimens",
+      "ground_truth": {
+        "2025": [31, 32, 33]
+      }
+    },
+    {
+      "id": "q3",
+      "query": "What are the recommendations for baseline second-line LPA (SL-LPA) testing?",
+      "category": "Diagnostics",
+      "ground_truth": {
+        "2017": [46, 52, 53],
+        "2021": [34, 35, 36]
+      }
+    },
+    {
+      "id": "q4",
+      "query": "How should adverse drug reactions during TB treatment be monitored and managed?",
+      "category": "Patient Safety & ADR",
+      "ground_truth": {
+        "2017": [120, 121, 122],
+        "2021": [145, 146, 147],
+        "2016": [85, 86]
+      }
+    },
+    {
+      "id": "q5",
+      "query": "What are the recommendations for rapid molecular diagnosis of TB using CBNAAT or Truenat?",
+      "category": "Diagnostics",
+      "ground_truth": {
+        "2017": [46, 50, 51],
+        "2021": [32, 33, 34],
+        "2016": [24, 25]
+      }
+    },
+    {
+      "id": "q6",
+      "query": "What infection control measures are recommended to prevent TB transmission?",
+      "category": "Infection Control",
+      "ground_truth": {
+        "2017": [46, 180, 181],
+        "2016": [195, 196]
+      }
+    },
+    {
+      "id": "q7",
+      "query": "What are the recommendations for management of non-tuberculous mycobacteria NTM?",
+      "category": "NTM Management",
+      "ground_truth": {
+        "2017": [46, 210, 211],
+        "2021": [240, 241],
+        "2025": [40, 41]
+      }
+    },
+    {
+      "id": "q8",
+      "query": "What treatment regimens are recommended for multidrug-resistant tuberculosis MDR-TB?",
+      "category": "Treatment Regimens",
+      "ground_truth": {
+        "2017": [46, 75, 76],
+        "2021": [50, 51, 52],
+        "2025": [28, 29, 30]
+      }
+    },
+    {
+      "id": "q9",
+      "query": "What newer drugs like Bedaquiline and Delamanid are recommended for drug-resistant TB?",
+      "category": "Newer Drugs",
+      "ground_truth": {
+        "2017": [46, 78, 79],
+        "2021": [54, 55, 56],
+        "2025": [31, 32]
+      }
+    },
+    {
+      "id": "q10",
+      "query": "What strategies are outlined for the prevention of drug-resistant tuberculosis?",
+      "category": "Prevention Strategies",
+      "ground_truth": {
+        "2017": [46, 47],
+        "2021": [25, 26]
+      }
+    }
+  ]
+}
