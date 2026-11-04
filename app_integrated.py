@@ -85,10 +85,41 @@ st.markdown("""
     background: var(--bg);
 }
 
-header[data-testid="stHeader"] {
-    display: none !important;
-    height: 0px !important;
-    visibility: hidden !important;
+/* Transparent Header & Functional Sidebar Controls */
+header[data-testid="stHeader"],
+[data-testid="stHeader"] {
+    background: transparent !important;
+    background-color: transparent !important;
+    height: 3.2rem !important;
+    z-index: 99990 !important;
+    display: flex !important;
+    visibility: visible !important;
+}
+
+[data-testid="stSidebarCollapsedControl"],
+[data-testid="collapsedControl"],
+[data-testid="stSidebarCollapseButton"] {
+    display: flex !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    z-index: 100000 !important;
+}
+
+[data-testid="stSidebarCollapsedControl"] button,
+[data-testid="collapsedControl"] button,
+[data-testid="stSidebarCollapseButton"] button {
+    background: #142B3B !important;
+    color: #FFFFFF !important;
+    border: 1px solid #287C78 !important;
+    border-radius: 8px !important;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.15) !important;
+}
+
+[data-testid="stSidebarCollapsedControl"] svg,
+[data-testid="collapsedControl"] svg,
+[data-testid="stSidebarCollapseButton"] svg {
+    color: #FFFFFF !important;
+    fill: #FFFFFF !important;
 }
 
 [data-testid="stDecoration"] {
@@ -97,7 +128,7 @@ header[data-testid="stHeader"] {
 
 .block-container {
     max-width: 1450px;
-    padding-top: 1.2rem !important;
+    padding-top: 2rem !important;
     padding-bottom: 3rem;
 }
 
@@ -148,8 +179,18 @@ p {
 /* Sidebar */
 
 section[data-testid="stSidebar"] {
-    background: var(--navy);
-    border-right: 1px solid #284353;
+    background: var(--navy) !important;
+    border-right: 1px solid #284353 !important;
+    min-width: 290px !important;
+}
+
+@media (min-width: 768px) {
+    section[data-testid="stSidebar"] {
+        transform: none !important;
+        margin-left: 0 !important;
+        display: block !important;
+        visibility: visible !important;
+    }
 }
 
 section[data-testid="stSidebar"] * {
@@ -174,7 +215,7 @@ section[data-testid="stSidebar"] [data-testid="stRadio"] label:hover {
 /* Hero section */
 
 .hero {
-    background: linear-gradient(120deg, #142B3B 0%, #1E4855 65%, #287C78 100%);
+    background: linear-gradient(120deg, #142B3B 0%, #1E4855 65%, #287C78 100%) !important;
     padding: 43px 42px;
     border-radius: 18px;
     margin-bottom: 32px;
@@ -183,8 +224,21 @@ section[data-testid="stSidebar"] [data-testid="stRadio"] label:hover {
     overflow: hidden;
 }
 
+.hero,
+.hero *,
+.hero h1,
+.hero p,
+.hero div,
+.hero span,
+[data-testid="stAppViewContainer"] .main .hero,
+[data-testid="stAppViewContainer"] .main .hero *,
+[data-testid="stMarkdownContainer"] .hero,
+[data-testid="stMarkdownContainer"] .hero * {
+    color: #FFFFFF !important;
+}
+
 .hero .eyebrow {
-    color: #B8D9D2;
+    color: #B8D9D2 !important;
     text-transform: uppercase;
     font-size: 11px;
     letter-spacing: 2px;
@@ -476,7 +530,6 @@ section[data-testid="stSidebar"] [data-testid="stRadio"] label:hover {
 
 #MainMenu {visibility: hidden;}
 footer {visibility: hidden;}
-header {visibility: hidden; display: none !important;}
 
 </style>
 """, unsafe_allow_html=True)
@@ -955,15 +1008,28 @@ with st.sidebar:
 
     st.divider()
 
+    pages = [
+        "Dashboard",
+        "Ask TB Guidelines",
+        "Version Comparison",
+        "Evidence Explorer",
+        "Analysis & Evaluation"
+    ]
+
+    if "nav_page" not in st.session_state or st.session_state["nav_page"] not in pages:
+        st.session_state["nav_page"] = "Dashboard"
+
+    current_index = pages.index(st.session_state["nav_page"])
+
+    def on_nav_change():
+        st.session_state["nav_page"] = st.session_state["sidebar_nav"]
+
     page = st.radio(
         "WORKSPACE",
-        [
-            "Dashboard",
-            "Ask TB Guidelines",
-            "Version Comparison",
-            "Evidence Explorer",
-            "Analysis & Evaluation"
-        ],
+        pages,
+        index=current_index,
+        key="sidebar_nav",
+        on_change=on_nav_change,
         label_visibility="visible"
     )
 
@@ -995,14 +1061,14 @@ engine_status = get_engine_status()
 if page == "Dashboard":
 
     st.markdown("""
-    <div class="hero">
-        <div class="eyebrow">Healthcare Research Intelligence</div>
-        <h1>Intelligent TB Guideline Analysis</h1>
-        <p>
+    <div class="hero" style="background: linear-gradient(120deg, #142B3B 0%, #1E4855 65%, #287C78 100%) !important; padding: 40px; border-radius: 18px; margin-bottom: 28px;">
+        <div class="eyebrow" style="color: #A5D6CD !important; font-size: 11px; letter-spacing: 2px; font-weight: 700; text-transform: uppercase;">Healthcare Research Intelligence</div>
+        <h1 style="color: #FFFFFF !important; font-size: clamp(26px, 3vw, 38px); font-weight: 800; margin: 14px 0 10px 0; letter-spacing: -0.5px;">Intelligent TB Guideline Analysis</h1>
+        <p style="color: #E2EFEA !important; font-size: 15px; line-height: 1.6; max-width: 900px; margin-bottom: 16px;">
             A unified LLM + RAG research platform for exploring,
             retrieving and comparing tuberculosis guideline recommendations.
         </p>
-        <div class="hero-note">
+        <div class="hero-note" style="color: #B2D8D0 !important; font-size: 12px; font-weight: 700; letter-spacing: 1.5px;">
             RETRIEVE &nbsp; · &nbsp; COMPARE &nbsp; · &nbsp;
             UNDERSTAND &nbsp; · &nbsp; VERIFY
         </div>
@@ -1060,12 +1126,18 @@ if page == "Dashboard":
             "Ask TB Guidelines",
             "Ask a question and retrieve supporting passages from the indexed guidelines."
         )
+        if st.button("Open Ask TB Guidelines →", key="btn_ask_tb", use_container_width=True):
+            st.session_state["nav_page"] = "Ask TB Guidelines"
+            st.rerun()
 
         feature_card(
             "▤",
             "Evidence Explorer",
             "Search and inspect source passages with year and PDF-page traceability."
         )
+        if st.button("Open Evidence Explorer →", key="btn_explorer", use_container_width=True):
+            st.session_state["nav_page"] = "Evidence Explorer"
+            st.rerun()
 
     with c2:
         feature_card(
@@ -1073,12 +1145,18 @@ if page == "Dashboard":
             "Version Comparison",
             "Retrieve evidence separately from two selected guideline editions."
         )
+        if st.button("Open Version Comparison →", key="btn_compare", use_container_width=True):
+            st.session_state["nav_page"] = "Version Comparison"
+            st.rerun()
 
         feature_card(
             "◫",
             "Analysis & Evaluation",
             "Review the implemented pipeline and evaluation requirements without fabricated scores."
         )
+        if st.button("Open Analysis & Evaluation →", key="btn_eval", use_container_width=True):
+            st.session_state["nav_page"] = "Analysis & Evaluation"
+            st.rerun()
 
     section_heading(
         "DOCUMENT COLLECTION",
