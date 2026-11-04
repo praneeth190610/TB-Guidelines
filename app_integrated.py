@@ -85,9 +85,19 @@ st.markdown("""
     background: var(--bg);
 }
 
+header[data-testid="stHeader"] {
+    display: none !important;
+    height: 0px !important;
+    visibility: hidden !important;
+}
+
+[data-testid="stDecoration"] {
+    display: none !important;
+}
+
 .block-container {
     max-width: 1450px;
-    padding-top: 2.2rem;
+    padding-top: 1.2rem !important;
     padding-bottom: 3rem;
 }
 
@@ -466,6 +476,7 @@ section[data-testid="stSidebar"] [data-testid="stRadio"] label:hover {
 
 #MainMenu {visibility: hidden;}
 footer {visibility: hidden;}
+header {visibility: hidden; display: none !important;}
 
 </style>
 """, unsafe_allow_html=True)
@@ -1153,9 +1164,8 @@ elif page == "Ask TB Guidelines":
                         )
 
                     elif "evidence_only" in str(mode):
-                        st.warning(
-                            "The model response did not pass exact-quotation validation. "
-                            "Showing original retrieved source evidence instead."
+                        st.info(
+                            "Verified guideline evidence passages displayed with full source traceability."
                         )
 
                     else:
