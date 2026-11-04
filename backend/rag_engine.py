@@ -69,7 +69,7 @@ import hybrid_retrieval as retrieval
 # 1. CONFIGURATION
 # ============================================================
 
-MAX_RETRIEVED_RESULTS = 5
+MAX_RETRIEVED_RESULTS = 4
 MAX_EVIDENCE_PAGES = 12
 MAX_CHARS_PER_PAGE = 5000
 
@@ -83,8 +83,8 @@ OLLAMA_MODEL = os.getenv(
     "qwen2.5:1.5b"
 )
 
-OLLAMA_TIMEOUT = int(os.getenv("OLLAMA_TIMEOUT", "300"))
-OLLAMA_MAX_TOKENS = int(os.getenv("OLLAMA_MAX_TOKENS", "900"))
+OLLAMA_TIMEOUT = int(os.getenv("OLLAMA_TIMEOUT", "20"))
+OLLAMA_MAX_TOKENS = int(os.getenv("OLLAMA_MAX_TOKENS", "350"))
 
 
 print("\n" + "=" * 65)
@@ -330,11 +330,16 @@ def format_evidence(evidence):
             for value in item["chunk_indices"]
         )
 
+        # Cap individual evidence passage text to 800 chars for rapid prompt ingestion
+        passage_text = str(item.get("text", "")).strip()
+        if len(passage_text) > 800:
+            passage_text = passage_text[:800] + "..."
+
         blocks.append(
             f"{citation}\n"
             f"Original chunk indices: {chunk_reference}\n"
             f"Extraction method: {item['method']}\n"
-            f"Evidence: {item['text']}"
+            f"Evidence: {passage_text}"
         )
 
     return "\n\n".join(blocks)
@@ -352,7 +357,10 @@ def call_ollama(messages):
         "stream": False,
         "options": {
             "temperature": 0.1,
-            "num_predict": OLLAMA_MAX_TOKENS
+            "num_predict": OLLAMA_MAX_TOKENS,
+            "num_thread": min(8, os.cpu_count() or 4),
+            "top_k": 20,
+            "top_p": 0.8
         }
     }
 
@@ -872,6 +880,7 @@ Return ONLY valid JSON with this exact structure:
 }
 
 Rules:
+- Provide 3 to 4 concise, key factual claims.
 - Each claim must be atomic and supported by its own quotation.
 - evidence_id is the integer label of the source entry, starting at 1.
 - quote must be copied exactly from that source passage; do not repair grammar.
@@ -898,10 +907,10 @@ Rules:
     best_claims = []
     best_payload = None
 
-    for attempt in range(2):
+    for attempt in range(1):
         try:
             raw = call_ollama(messages)
-            print(f"\n========== RAW STRUCTURED LLM RESPONSE (ATTEMPT {attempt + 1}) ==========")
+            print(f"\n========== RAW STRUCTURED LLM RESPONSE ==========")
             print(raw)
             print("========== END RAW RESPONSE ==========")
         except Exception as ollama_err:
@@ -937,19 +946,6 @@ Rules:
             last_reason = reason
         except (ValueError, json.JSONDecodeError) as exc:
             last_reason = str(exc)
-
-        if attempt == 0:
-            messages = [
-                {"role": "system", "content": system_prompt},
-                {"role": "user", "content": (
-                    f"The previous response had unverified claims: {last_reason}\n"
-                    "Try again. Return valid JSON only. Every quote must be one "
-                    "continuous passage copied verbatim from its numbered evidence. "
-                    "You may omit PDF bullet symbols only if the remaining words "
-                    "are still continuous; do not omit words or punctuation. "
-                    "Use a valid integer evidence_id. Do not invent quotations."
-                )}
-            ]
 
     if best_claims and len(best_claims) >= 1:
         print(f"Accepting {len(best_claims)} verified quote-anchored claims (rejected unverified claims).")

@@ -1131,25 +1131,33 @@ elif page == "Ask TB Guidelines":
             st.warning("Please enter a research question.")
 
         else:
+            if "qa_cache" not in st.session_state:
+                st.session_state["qa_cache"] = {}
 
-            engine, error = safe_load_engine()
+            cache_key = question.strip().lower()
 
-            if error:
-                st.error("The RAG engine could not be loaded.")
-                st.code(error)
-
+            if cache_key in st.session_state["qa_cache"]:
+                result = st.session_state["qa_cache"][cache_key]
             else:
+                engine, error = safe_load_engine()
 
-                with st.spinner(
-                    "Searching guideline evidence and preparing the response..."
-                ):
-                    try:
-                        result = engine.answer_question(question.strip())
+                if error:
+                    st.error("The RAG engine could not be loaded.")
+                    st.code(error)
+                    result = None
+                else:
+                    with st.spinner(
+                        "Searching guideline evidence and preparing the response..."
+                    ):
+                        try:
+                            result = engine.answer_question(question.strip())
+                            if result and result.get("generation_success"):
+                                st.session_state["qa_cache"][cache_key] = result
 
-                    except Exception as exc:
-                        result = None
-                        st.error("The question could not be processed.")
-                        st.exception(exc)
+                        except Exception as exc:
+                            result = None
+                            st.error("The question could not be processed.")
+                            st.exception(exc)
 
                 if result:
 
