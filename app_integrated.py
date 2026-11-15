@@ -1327,51 +1327,51 @@ elif page == "Ask TB Guidelines":
                             st.error("The question could not be processed.")
                             st.exception(exc)
 
-                if result:
+            if result:
 
-                    st.markdown("### Research response")
+                st.markdown("### Research response")
 
-                    mode = result.get("generation_mode", "unknown")
-                    success = result.get("generation_success", False)
+                mode = result.get("generation_mode", "unknown")
+                success = result.get("generation_success", False)
 
-                    if success:
-                        st.success(
-                            "Quote-anchored response returned. Citation labels are assigned by Python."
-                        )
-
-                    elif "evidence_only" in str(mode):
-                        st.info(
-                            "Verified guideline evidence passages displayed with full source traceability."
-                        )
-
-                    else:
-                        st.info(f"Response mode: {mode}")
-
-                    st.markdown(
-                        result.get("answer", "No answer text was returned.")
+                if success:
+                    st.success(
+                        "Quote-anchored response returned. Citation labels are assigned by Python."
                     )
 
-                    audit = result.get("citation_audit", {})
-                    if audit:
-                        st.caption(
-                            "Citation audit: " + str(audit.get("status", "not available"))
-                            + " · Exact source quotation checked: "
-                            + ("yes" if audit.get("status") == "quote_traceability_passed" else "no")
-                            + " · Semantic entailment automatically verified: no"
-                        )
-
-                    section_heading(
-                        "SOURCE VERIFICATION",
-                        "Retrieved supporting evidence",
-                        "Check the original guideline and PDF page before using any finding."
+                elif "evidence_only" in str(mode):
+                    st.info(
+                        "Verified guideline evidence passages displayed with full source traceability."
                     )
 
-                    render_evidence_cards(result.get("evidence", []))
+                else:
+                    st.info(f"Response mode: {mode}")
 
+                st.markdown(
+                    result.get("answer", "No answer text was returned.")
+                )
+
+                audit = result.get("citation_audit", {})
+                if audit:
                     st.caption(
-                        "Research prototype only. This output is not medical "
-                        "advice or a substitute for official clinical guidance."
+                        "Citation audit: " + str(audit.get("status", "not available"))
+                        + " · Exact source quotation checked: "
+                        + ("yes" if audit.get("status") == "quote_traceability_passed" else "no")
+                        + " · Semantic entailment automatically verified: no"
                     )
+
+                section_heading(
+                    "SOURCE VERIFICATION",
+                    "Retrieved supporting evidence",
+                    "Check the original guideline and PDF page before using any finding."
+                )
+
+                render_evidence_cards(result.get("evidence", []))
+
+                st.caption(
+                    "Research prototype only. This output is not medical "
+                    "advice or a substitute for official clinical guidance."
+                )
 
 
 # =========================================================
@@ -1485,72 +1485,72 @@ elif page == "Version Comparison":
                             old_results, new_results = [], []
                             st.exception(exc)
 
-                left, right = st.columns(2)
+            left, right = st.columns(2)
 
-                with left:
-                    st.markdown(f"#### 📘 {old_year} Guideline Evidence ({len(old_results)} passages)")
-                    render_evidence_cards(old_results)
+            with left:
+                st.markdown(f"#### 📘 {old_year} Guideline Evidence ({len(old_results)} passages)")
+                render_evidence_cards(old_results)
 
-                with right:
-                    st.markdown(f"#### 📘 {new_year} Guideline Evidence ({len(new_results)} passages)")
-                    render_evidence_cards(new_results)
+            with right:
+                st.markdown(f"#### 📘 {new_year} Guideline Evidence ({len(new_results)} passages)")
+                render_evidence_cards(new_results)
 
-                section_heading(
-                    "CROSS-VERSION COMPARATIVE MATRIX",
-                    f"Evidence-Grounded Recommendation Synthesis: {old_year} vs {new_year}",
-                    "Traceable comparative dimensions derived strictly from the retrieved evidence passages."
-                )
+            section_heading(
+                "CROSS-VERSION COMPARATIVE MATRIX",
+                f"Evidence-Grounded Recommendation Synthesis: {old_year} vs {new_year}",
+                "Traceable comparative dimensions derived strictly from the retrieved evidence passages."
+            )
 
-                matrix_rows = generate_comparison_analysis(
-                    old_year, new_year, topic.strip(), old_results, new_results
-                )
+            matrix_rows = generate_comparison_analysis(
+                old_year, new_year, topic.strip(), old_results, new_results
+            )
 
-                if matrix_rows:
-                    table_cols = [
-                        "Dimension",
-                        f"{old_year} Guideline Recommendation",
-                        f"{new_year} Guideline Recommendation",
-                        "Classification",
-                        "Evidence Rationale"
-                    ]
-                    df_matrix = pd.DataFrame([{col: r.get(col, "") for col in table_cols} for r in matrix_rows])
-                    st.dataframe(df_matrix, width="stretch", hide_index=True)
+            if matrix_rows:
+                table_cols = [
+                    "Dimension",
+                    f"{old_year} Guideline Recommendation",
+                    f"{new_year} Guideline Recommendation",
+                    "Classification",
+                    "Evidence Rationale"
+                ]
+                df_matrix = pd.DataFrame([{col: r.get(col, "") for col in table_cols} for r in matrix_rows])
+                st.dataframe(df_matrix, width="stretch", hide_index=True)
 
-                    st.markdown("### 📋 True Key Evolution Findings & Clinical Analysis")
-                    st.caption(f"Detailed evidence comparison between {old_year} and {new_year} across 5 core clinical dimensions:")
+            st.markdown("### 📋 True Key Evolution Findings & Clinical Analysis")
+            st.caption(f"Detailed evidence comparison between {old_year} and {new_year} across 5 core clinical dimensions:")
 
-                    for r in matrix_rows:
-                        dim_name = r["Dimension"]
-                        icon = r.get("Icon", "📋")
-                        classification = r["Classification"]
-                        old_rec = r.get(f"{old_year} Guideline Recommendation", "")
-                        new_rec = r.get(f"{new_year} Guideline Recommendation", "")
-                        finding = r.get("True Evolution Finding", r.get("Evidence Rationale", ""))
+            for r in matrix_rows:
+                dim_name = r["Dimension"]
+                icon = r.get("Icon", "📋")
+                classification = r["Classification"]
+                old_rec = r.get(f"{old_year} Guideline Recommendation", "")
+                new_rec = r.get(f"{new_year} Guideline Recommendation", "")
+                finding = r.get("True Evolution Finding", r.get("Evidence Rationale", ""))
 
-                        with st.container(border=True):
-                            c_title, c_badge = st.columns([3, 1])
-                            with c_title:
-                                st.markdown(f"#### {icon} {dim_name}")
-                            with c_badge:
-                                st.info(f"**{classification.upper()}**")
+                with st.container(border=True):
+                    c_title, c_badge = st.columns([3, 1])
+                    with c_title:
+                        st.markdown(f"#### {icon} {dim_name}")
+                    with c_badge:
+                        st.info(f"**{classification.upper()}**")
 
-                            col_old, col_new = st.columns(2)
-                            with col_old:
-                                st.markdown(f"**📘 {old_year} Guideline Baseline**")
-                                st.markdown(f"> {old_rec}")
-                            with col_new:
-                                st.markdown(f"**📗 {new_year} Guideline Recommendation**")
-                                st.markdown(f"> {new_rec}")
+                    col_old, col_new = st.columns(2)
+                    with col_old:
+                        st.markdown(f"**📘 {old_year} Guideline Baseline**")
+                        st.markdown(f"> {old_rec}")
+                    with col_new:
+                        st.markdown(f"**📗 {new_year} Guideline Recommendation**")
+                        st.markdown(f"> {new_rec}")
 
-                            st.success(f"**🔍 True Key Evolution Finding & Clinical Impact:**\n\n{finding}")
-                else:
-                    st.info("No comparative dimensions could be extracted from the retrieved passages for this topic.")
+                    st.success(f"**🔍 True Key Evolution Finding & Clinical Impact:**\n\n{finding}")
+            else:
+                st.info("No comparative dimensions could be extracted from the retrieved passages for this topic.")
 
-                st.warning(
-                    "⚠️ **Academic & Clinical Interpretation Rule:** A missing retrieved passage is NOT proof "
-                    "that a recommendation was removed, altered, or superseded. Always verify against the complete "
-                    "original guideline PDF before drawing policy or clinical conclusions."
-                )
+            st.warning(
+                "⚠️ **Academic & Clinical Interpretation Rule:** A missing retrieved passage is NOT proof "
+                "that a recommendation was removed, altered, or superseded. Always verify against the complete "
+                "original guideline PDF before drawing policy or clinical conclusions."
+            )
 
 
 # =========================================================
