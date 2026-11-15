@@ -107,10 +107,24 @@ print("Documents loaded:", len(all_documents))
 # 4. LOAD MODELS
 # ============================================================
 
+def resolve_cached_snapshot_path(model_id):
+    """Resolve direct local snapshot path to eliminate HuggingFace Hub network checks."""
+    try:
+        hub_dir = Path.home() / ".cache" / "huggingface" / "hub"
+        folder_name = "models--" + model_id.replace("/", "--")
+        snapshots_dir = hub_dir / folder_name / "snapshots"
+        if snapshots_dir.is_dir():
+            snapshots = list(snapshots_dir.iterdir())
+            if snapshots and snapshots[0].is_dir():
+                return str(snapshots[0])
+    except Exception:
+        pass
+    return model_id
+
 print("\nLoading embedding model...")
 
 embedding_model = SentenceTransformer(
-    EMBEDDING_MODEL_NAME
+    resolve_cached_snapshot_path(EMBEDDING_MODEL_NAME)
 )
 
 print("Embedding model loaded.")
@@ -118,7 +132,7 @@ print("Embedding model loaded.")
 print("\nLoading Cross-Encoder model...")
 
 cross_encoder = CrossEncoder(
-    CROSS_ENCODER_MODEL_NAME
+    resolve_cached_snapshot_path(CROSS_ENCODER_MODEL_NAME)
 )
 
 print("Cross-Encoder loaded.")

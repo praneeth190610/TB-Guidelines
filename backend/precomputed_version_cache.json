@@ -1,0 +1,426 @@
+{
+  "2017|2021|rapid molecular testing and second-line lpa": {
+    "old": [
+      {
+        "year": "2017",
+        "source": "Guideline for PMDT in India 2017 with messages.pdf",
+        "page": "50",
+        "chunk_indices": [
+          "1"
+        ],
+        "method": "PDF text",
+        "text": "le timely treatment decision with appropriate regimen. Towards this end, a staggered testing algorithm utilizing newer rapid diagnostic technologies such as CBNAAT, first and second-line LPA in line with WHO guidelines and expert committee meetings is detailed. The programme must strive to provide every TB patient with access to at least R susceptibility testing i.e., UDST. 4.2 Laboratory services required for PMDT Optimal management of DR-TB requires both Mycobacterial and clinical laboratory services. At a minimum, the state level Intermediate Reference Laboratory (IRL) or any other RNTCP- certified Culture & DST laboratory should provide diagnostic culture on liquid and/or solid media; testing for resistance/susceptibility to at least R by RNTCP approved genotypic or phenotypic methods; and confirmation of the species as M.tuberculosis by Immuno- chromatographic assay. Clinical laboratory services are required for proper evaluation and monitoring of patients, including",
+        "cross_encoder_score": 4.677114009857178
+      },
+      {
+        "year": "2017",
+        "source": "Guideline for PMDT in India 2017 with messages.pdf",
+        "page": "52",
+        "chunk_indices": [
+          "1",
+          "2"
+        ],
+        "method": "PDF text",
+        "text": "l also be H resistant, i.e., MDR-TB. This has been substantiated in the National Drug Resistance Survey (2014-16). [7] Therefore, RNTCP has taken the programmatic decision that patients, who have any R resistance, should be managed as if they are an MDR-TB patient and this is in line with WHO global guidelines for PMDT. 4.5 Methods for drug susceptibility testing Presently drug resistance detection using the following technologies is available for diagnosis of Drug Resistant TB through rapid molecular diagnostic testing: - Line Probe Assay (LPA) for detection of MTB complex and resistance to first line drugs R, H and second-line drugs class FQ and class SLID [20] [8]; and - Cartridge Based - Nucleic Acid Amplification Test (CBNAAT) Xpert MTB/Rif testing using the Gene-Xpert platform for now [20]. Growth-based phenotypic drug susceptibility testing: Culture though a highly sensitive and specific method for TB diagnosis, requires 2-8 weeks to yield results and hence does not help in early detection. However culture will be used for long-term follow-up of patients on Drug Resistant TB treatment and help detect early recurrence in both drug sensitive and drug-resistant TB. The growth-based phenotypic culture methods include automated Liquid culture systems e.g., BACTEC MGIT 960, BacTAlert or Versatrek etc., and solid (L\u00f6wenstein Jensen) media. Rapid molecular Drug Resistance Testing: Line Probe Assay (LPA) provides rapid diagnosis of R and H resistance as well as resistance to class FQ and class SLID. LPA can yield results in 72 hours. Nucleic Acid Amplification Test (NAAT) provides accurate and rapid diagnosis of TB by detecting M.tb and R resistance conferring mutations. [20] The test can be performed on both respiratory and non-respiratory specimens and yields results in 2 hours. Presently,",
+        "cross_encoder_score": 4.017650604248047
+      },
+      {
+        "year": "2017",
+        "source": "Guideline for PMDT in India 2017 with messages.pdf",
+        "page": "28",
+        "chunk_indices": [
+          "0"
+        ],
+        "method": "PDF text",
+        "text": "6 assets. [3] Prevention, management and mitigation of stigma and discrimination are essential elements of a patient-centered care approach to TB management. 1.6 Universal drug susceptibility testing The programme is committed to providing Universal Drug Susceptibility Testing (UDST) for all diagnosed and notified TB patients.[3] Depending upon resource availability, this service is progressively being made available throughout the country. A range of rapid molecular tests are available for UDST, such as Cartridge Based Nucleic Acid Amplification Test (CBNAAT) and Line Probe Assay (LPA). In the past, patients were offered DST based on their risk of developing drug resistance. Over time, DST has been increasingly made available to the patient to lower levels of risk. Currently, all patients of TB apart from those not previously exposed to anti-TB treatment (ATT) are routinely offered atleast the R resistance test. The revised algorithm for presumptive TB in the RNTCP",
+        "cross_encoder_score": 2.451185464859009
+      }
+    ],
+    "new": [
+      {
+        "year": "2021",
+        "source": "data 2021.pdf",
+        "page": "60",
+        "chunk_indices": [
+          "2"
+        ],
+        "method": "PDF text",
+        "text": "o detect MDR/RR-TB and to use the results to guide treatment decisions. WHO approved rapid molecular DST is recommended as the initial test to detect drug resistance before the initiation of appropriate treatment for all TB patients, including new patients and patients with a previous history of TB treatment. Line probe assay (LPA) can detect mutations commonly associated with resistance to R, H, FQ and SLI agents. No rapid molecular testing is currently available for E or Z. Results from LPA can be used to decide upon the initial regimen for treatment of H mono/poly DR-TB, or some other forms of mono-resistant or poly-resistant TB. LPA can also provide information on the mutation patterns, which can influence the choice of treatment (e.g. if only the InhA mutation is present, it is likely that H can still be effective at high dose, whereas if the KatG mutation alone or both InhA and KatG are present, H is no longer effective, even at high dose). If RR is detected, rapid",
+        "cross_encoder_score": 5.450709819793701
+      },
+      {
+        "year": "2021",
+        "source": "data 2021.pdf",
+        "page": "57",
+        "chunk_indices": [
+          "0"
+        ],
+        "method": "PDF text",
+        "text": "GUIDELINES FOR PROGRAMMATIC MANAGEMENT OF DRUG RESISTANT TB IN INDIA 2021 17 The vision of NTEP is to provide early diagnosis to all persons with any form of DR-TB through universal access to drug susceptibility testing. Rapid identification of DR-TB is achieved by using a combination of NAAT (CBNAAT/ Truenat), first- and second-line LPA and liquid C&DST for specific drugs, using a step-wise approach elaborated in integrated DR-TB diagnostic algorithm described in this chapter. DST is divided into phenotypic tests that observe growth or metabolic inhibition in anti-TB drug-free and drug-containing media and molecular tests that detect mutations in genes associated with drug resistance. The case finding efforts are supported with quality assured and certified C&DST labs that are equipped with information management systems for real-time reporting of results to the field. Quality assured services are also provided through certified laboratories in the private sector. This",
+        "cross_encoder_score": 4.501923561096191
+      },
+      {
+        "year": "2021",
+        "source": "data 2021.pdf",
+        "page": "64",
+        "chunk_indices": [
+          "0"
+        ],
+        "method": "PDF text",
+        "text": "GUIDELINES FOR PROGRAMMATIC MANAGEMENT OF DRUG RESISTANT TB IN INDIA 2021 24 3.2. Integrated drug-resistant TB algorithm Effective management of DR-TB relies on detection of drug resistance followed by appropriate treatment. Genotypic testing is much faster than phenotypic methods. As these are not growth- based tests, timely diagnosis and prompt treatment initiation is possible. These include: - Nucleic Acid Amplification Tests (NAAT) which includes CBNAAT and Truenat. These tests detect R resistance; and - Line Probe Assay (LPA) which detects resistance to R, H, FQ and SLI drugs. Rapid molecular tests such as NAAT are the preferred method for initial detection of RR. This is followed with LPA for detection of resistance to FQ and SLI drugs. Phenotypic DST includes performing DST using MGIT system which is the preferred method for DST to many anti \u2013TB drugs. The following drugs are tested using this method: - Group A - Levofloxacin, Moxifloxacin, Bedaquiline**, Linezolid - Group",
+        "cross_encoder_score": 2.1684975624084473
+      },
+      {
+        "year": "2021",
+        "source": "data 2021.pdf",
+        "page": "58",
+        "chunk_indices": [
+          "0"
+        ],
+        "method": "PDF text",
+        "text": "GUIDELINES FOR PROGRAMMATIC MANAGEMENT OF DRUG RESISTANT TB IN INDIA 2021 18 2. Growth based Drug Susceptibility Testing (DST). These are phenotypic tests wherein bacilli are grown and subsequently tested for drug susceptibility using various drug containing and drug-free media. 3.1.1. Rapid molecular drug resistance testing (genotypic tests) Often referred to as nucleic acid amplification tests (NAATs), these assays rely on amplification of a targeted genetic region of the Mycobacterium tuberculosis (M. tb) complex, typically by Polymerase Chain Reaction (PCR). Molecular tests can detect TB and resistance to key anti-TB drugs, such as rifampicin (R) and isoniazid (H), fluoroquinolones (FQ) and second- line injectable drugs (SLID) more quickly than conventional C&DST. They are also available at different levels of health-care systems. Molecular methods however cannot be used for determining response to treatment (11). i) The Xpert MTB/RIF is a cartridge-based NAAT",
+        "cross_encoder_score": 1.8937323093414307
+      }
+    ]
+  },
+  "2017|2021|bedaquiline and shorter mdr-tb regimens": {
+    "old": [
+      {
+        "year": "2017",
+        "source": "Guideline for PMDT in India 2017 with messages.pdf",
+        "page": "46",
+        "chunk_indices": [
+          "1"
+        ],
+        "method": "PDF text",
+        "text": "trict responsibilities understood by all and scale-up plan of Bedaquiline, shorter MDR-TB regimen and DST guided treatment. Specific objectives for PMDT under NSP are: - by end 2017, complete nationwide geographical coverage of access to baseline second- line DST using SL-LPA, access to shorter MDR-TB regimen and newer drugs like Bedaquiline; - by 2025 ensure Universal access to rapid molecular DRT for all diagnosed TB patients; Universal access to DST guided treatment and expands access to newer drug; and management of NTM. 3.3 RNTCP strategy & intervention for prevention and management of DR-TB under NSP (2017-25) The RNTCP response to DR-TB revolves around strategy to prevent emergence and stop transmission of DR-TB. These are enumerated below: Prevention of DR-TB - sustain the highest quality care for drug sensitive TB patients; - promote rational use of anti-TB drugs; and - implement infection control measures. Stopping transmission of DR-TB - ensure early",
+        "cross_encoder_score": 7.795317649841309
+      },
+      {
+        "year": "2017",
+        "source": "Guideline for PMDT in India 2017 with messages.pdf",
+        "page": "83",
+        "chunk_indices": [
+          "1"
+        ],
+        "method": "PDF text",
+        "text": "omen and EPTB patients (see sections later). Shorter MDR-TB regimen The shorter MDR-TB regimen is recommended for patients in whom the diagnosis of MDR/RR-TB has been reliably confirmed by molecular (e.g. CBNAAT/ LPA) or phenotypic DST method and are found to be sensitive to both FQ and SLI by SL-LPA. All patients with confirmed R-resistant disease are treated as for MDR-TB and the shorter MDR-TB regimen could be used in these patients too. Children and PLHIV on antiretroviral therapy (ART) could receive the shorter MDR-TB regimen. [12][26] The following are the features of shorter MDR-TB regimen: - standardized shorter MDR-TB regimen with seven drugs and a treatment duration of 9- 11 months; - indicated conditionally in MDR-TB or RR-TB, regardless of patient age or HIV status; Exclusion criteria - Second-line drug resistance (FQ and/or SLI drugs), previous exposure for >1 month to a FQ or a second-line injectable medicine which is not in the shorter MDR-TB regimen but",
+        "cross_encoder_score": 6.000744819641113
+      },
+      {
+        "year": "2017",
+        "source": "Guideline for PMDT in India 2017 with messages.pdf",
+        "page": "48",
+        "chunk_indices": [
+          "0"
+        ],
+        "method": "PDF text",
+        "text": "26 - Manage the H mono/poly DR-TB patients: H mono/poly resistance is known to be around thrice as prevalent as RR-TB. A specific 9-12 month treatment regimen has been initiated to manage H mono-poly resistance with available first-line drugs strengthened with a fluoroquinolone and a second-line injectable. This regimen will be scaled-up across the country as per expansion of diagnostic and treatment capacity; - scale-up shorter MDR-TB regimen across the country by the end of 2017 for all RR-TB patients that meet criteria for this regimen; - Finalize the regimens containing newer drugs: Access to Bedaquiline will be expanded across India by the end of 2017. RNTCP will also introduce another new drug Delamanid by the end of 2017, after conditional approval from DCGI and undertake research with support of ICMR to evaluate the use of these newer drugs in combination therapy to reduce the duration of DR TB regimens to 4-6 months; - Ensure DST guided DR-TB regimen and manage",
+        "cross_encoder_score": 5.548588752746582
+      },
+      {
+        "year": "2017",
+        "source": "Guideline for PMDT in India 2017 with messages.pdf",
+        "page": "10",
+        "chunk_indices": [
+          "1"
+        ],
+        "method": "OCR",
+        "text": "3 7.1 Classes of anti-TB drugs recommended for treatment of DR-TB patients 53 7.2 Newer anti-TB drugs 54 7.2.1 Regulatory approvals for Bedaquiline in India 54 7.2.2 Criteria for patients to receive Bedaquiline 55 7.3 Integrated drug-resistantTB algorithm 56 7.4 Treatment initiation 58 7.5 Regimen type (with or without newer drugs) 60 7.5.1 H Mono/Poly drug-resistant TB 61 7.5.2 MDR/RR-TB 61 7.5.3 MDR/RR-TBwithadditionalresistancetoany/allFQorSLI 65 7.5.4 XDR-TB 65 7.5.5 Mixed pattern drugresistant TB 65 7.5.6 Non-TB Mycobacterium (NTM) 68 7.6 Drug dosage and administration 70 7.7 Patient counselling for DR-TB patients 72 7.8 TreatmentdurationforvariousDR-TBregimen 73 7.8.1 H mono-poly DR-TB regimen 73 7.8.2 ShorterMDR-TBregimen 73 7.8.3 Conventional MDR-TB regimen 74 7.8.4 XDR-TB regimen 74 7.8.5 Regimen for mixed pattern resistant TB 74 7.9 PatientflowforDR-TBpatients 75 7.10 ManagementofDR-TBpatientswithtreatmentinterruptionsand loss to follow-up 76 7.11 Transfers of DR-TB",
+        "cross_encoder_score": 4.918675422668457
+      }
+    ],
+    "new": [
+      {
+        "year": "2021",
+        "source": "data 2021.pdf",
+        "page": "88",
+        "chunk_indices": [
+          "2",
+          "3"
+        ],
+        "method": "PDF text",
+        "text": "m electrolytes (Na, K, Mg, Ca) Urine pregnancy test (in women of reproductive age group) Chest X-ray ECG 4.6.3. Treatment This section deals with the evidence, regimen composition, its duration, dosages, administration, treatment extension and additional consideration for Bdq use. 4.6.3.1. Evidence The evidence on shorter oral Bedaquiline-containing MDR/RR-TB regimen is primarily based on the programmatic data from South Africa, which was reviewed by WHO for the performance of standardized shorter regimen whereby injectable agent was replaced by Bdq, in combination with Lfx (or Mfx), Cfz, Hh, E, Z and Eto (or Pto). The preliminary analysis suggested that a 13% higher treatment success rates among the shorter oral Bedaquiline-containing MDR/ RR-TB regimen group as compared to the shorter injectable containing regimen and similar treatment success rates compared to longer oral M/XDR-TB regimen (15). 4.6.3.2. Regimen and duration A shorter oral Bedaquiline-containing MDR/RR-TB regimen of 9\u201311 months duration is recommended in eligible patients with confirmed MDR/RR-TB who have not been exposed to treatment with second-line TB medicines used in this regimen for more than 1 month, and in whom resistance to fluoroquinolones has been excluded.",
+        "cross_encoder_score": 8.429892539978027
+      },
+      {
+        "year": "2021",
+        "source": "data 2021.pdf",
+        "page": "89",
+        "chunk_indices": [
+          "0"
+        ],
+        "method": "PDF text",
+        "text": "GUIDELINES FOR PROGRAMMATIC MANAGEMENT OF DRUG RESISTANT TB IN INDIA 2021 49 Shorter oral Bedaquiline-containing MDR/RR-TB regimen will be introduced in the country in a phased manner to gain programmatic experience to guide future expansion. Till the complete geographical coverage, the states yet to transition to implementing shorter oral Bedaquiline- containing MDR/RR-TB regimen will continue to use shorter injectable containing regimen for MDR/RR-TB (see box 4.1 below). The regimen consists of an initial phase of 4 months that may be extended up to 6 months and a continuation phase of 5 months, giving a total duration of 9\u201311 months. Bdq is used for a duration of 6 months. (4-6) Bdq (6 m), Lfx, Cfz, Z, E, Hh, Eto (5) Lfx, Cfz, Z, E, The composition or the duration of the initial or continuation phase cannot be changed. Points to remember - From start to end of 4th month \u2013 Bdq, Lfx, Cfz, Z, E, Hh, Eto - From start of 5th month to end of 6th month \u2013 (If IP not extended) \u2013 Bdq,",
+        "cross_encoder_score": 7.847028732299805
+      },
+      {
+        "year": "2021",
+        "source": "data 2021.pdf",
+        "page": "85",
+        "chunk_indices": [
+          "2"
+        ],
+        "method": "PDF text",
+        "text": "algorithm for RR-TB patients is detailed in Figure 4.3 below. It will be further detailed in the subsequent sub-sections of the chapter. 4.6. Shorter oral Bedaquiline-containing MDR/RR-TB regimen This section deals with the guidance on transitioning from the current shorter injectable containing MDR/RR-TB regimen to the shorter oral Bedaquiline-containing MDR/RR-TB regimen in patients >5 years of age weighing 15kg or more in a phased manner starting with selected states to gain programmatic experience to guide future expansion within 2021. Pre- treatment counseling Information on lab result Importance of early initiation and adherence to treatment Nature and duration of treatment Possible change in the treatment Care and support services under NTEP Reassurance to the family against stigma Infection control precaution Family planning Contact investigation of family and TPT Figure 4.2: Key points to be covered during pre-treatment counselling of DR-TB patients",
+        "cross_encoder_score": 7.838726997375488
+      },
+      {
+        "year": "2021",
+        "source": "data 2021.pdf",
+        "page": "87",
+        "chunk_indices": [
+          "0"
+        ],
+        "method": "PDF text",
+        "text": "GUIDELINES FOR PROGRAMMATIC MANAGEMENT OF DRUG RESISTANT TB IN INDIA 2021 47 4.6.1. Eligibility criteria Shorter oral Bedaquiline-containing MDR/RR-TB regimen is recommended for those MDR/ RR-TB patients in whom resistance to the component drugs has been excluded or those who have not been previously treated for more than one month with second-line drugs used in shorter oral Bedaquiline-containing MDR/RR-TB regimen and have no other exclusion criteria. The criteria to include or exclude the patients from offering shorter oral Bedaquiline- containing MDR/RR-TB regimen are given below. 4.6.1.1. Inclusion criteria 1. DST based inclusion criteria \u25ba \u25baRifampicin resistance detected/inferred \u25ba \u25baMDR/RR-TB with H resistance detected/inferred based on InhA mutation only or based on KatG mutation only (not both) \u25ba \u25baMDR/RR-TB with FQ resistance not detected 2. Other inclusion criteria \u25ba \u25baChildren, aged 5 years to less than 18 years of age and weighing at least 15 kg, given their special",
+        "cross_encoder_score": 7.829608917236328
+      }
+    ]
+  },
+  "2017|2021|infection control measures for preventing tb transmission": {
+    "old": [
+      {
+        "year": "2017",
+        "source": "Guideline for PMDT in India 2017 with messages.pdf",
+        "page": "196",
+        "chunk_indices": [
+          "0",
+          "1",
+          "2"
+        ],
+        "method": "PDF text",
+        "text": "174 Chapter 15: Infection control measures Evidence indicates that DR-TB is similar in transmissibility to DS-TB. Thus, infection control policies and strategies are not much different for DR-TB. All facilities treating DR-TB patients must comply with adequate infection control measures. Ensuring implementation of infection control policy in all healthcare facilities, at public/private/household level and in congregate settings (correctional facilities, military barracks, homeless shelters, refugee camps, student dormitories and nursing homes, among others) is essential. This will help prevent transmission before diagnosis up to initial stages of treatment till the patient has culture converted and turned noninfectious. Actions are required at national and subnational level to provide managerial direction and at health facility level to implement airborne infection control measures. [14] 15.1 Activities for national and sub-national airborne infection control (AIC) - identify and strengthen a coordinating body for TB infection control, ensuring that TB infection control is part of a general infection prevention and control programme; - develop a comprehensive budgeted plan for implementation of TB infection control at all levels; - ensure that health facility design, construction, renovation and use are as per prescribed criteria; - conduct surveillance of TB disease among health workers, and conduct assessment at all levels of the health system and in congregate settings; - address TB infection control advocacy, communication and social mobilization; - monitor and evaluate the set of TB infection control measures; and - enable and conduct operational research. 15.2 Measures for facility-level TB infection control - identify and strengthen local coordinating bodies for TB infection control as part of the facility wide comprehensive infection prevention and control programme. In addition, develop a facility plan (including human resources and policies and procedures to ensure proper implementation of the controls listed below) for implementation: - adequate ventilation (ACH >12 per hrs) should be maintained for high priority health facility like DR-TB wards, ART centre, TB containment laboratory etc.; - beds should be arranged with 6 feet distance in between them; - staff should be trained for standard precaution, airborne infection control precaution, use of personal protective equipment (PPEs) and importance of educating patient to follow the same; - availability of different size of N 95 particulate respirators; and",
+        "cross_encoder_score": 7.462896347045898
+      },
+      {
+        "year": "2017",
+        "source": "Guideline for PMDT in India 2017 with messages.pdf",
+        "page": "46",
+        "chunk_indices": [
+          "2"
+        ],
+        "method": "PDF text",
+        "text": "TB patients; - promote rational use of anti-TB drugs; and - implement infection control measures. Stopping transmission of DR-TB - ensure early diagnosis, respiratory isolation (segregation of active TB patients in waiting rooms, wards, fast tracking) and prompt effective treatment initiation of all forms of DR- TB; - improve laboratory capacity for rapid diagnosis of DR-TB (expanded below);",
+        "cross_encoder_score": 6.907262802124023
+      }
+    ],
+    "new": [
+      {
+        "year": "2021",
+        "source": "data 2021.pdf",
+        "page": "75",
+        "chunk_indices": [
+          "0"
+        ],
+        "method": "PDF text",
+        "text": "GUIDELINES FOR PROGRAMMATIC MANAGEMENT OF DRUG RESISTANT TB IN INDIA 2021 35 reduce the risk of M. tuberculosis transmission, by reducing the concentration of infectious droplet nuclei in the air and the exposure of susceptible individuals to such aerosols. IPC measures are implemented in a systematic and objective way that prioritizes consideration of the hierarchy of administrative and environmental controls, and personal protection (20)(21). Administrative controls measures include triaging of people with signs and symptoms of TB, or with TB disease; separation of people with presumed or demonstrated infectious TB; prompt initiation of effective TB treatment of people with TB disease and respiratory hygiene (including cough etiquette) in people with presumed or confirmed TB. These measures aid in reducing M. tuberculosis transmission to health workers, persons attending health-care facilities or other persons in settings with a high risk of transmission. Environmental",
+        "cross_encoder_score": 6.334033012390137
+      },
+      {
+        "year": "2021",
+        "source": "data 2021.pdf",
+        "page": "152",
+        "chunk_indices": [
+          "2"
+        ],
+        "method": "PDF text",
+        "text": "tronger analgesics, including morphine, should be used when appropriate to keep the patient adequately comfortable. - Infection control measures. The patient who is taken off anti-TB treatment because of failed often remains infectious. Infection control measures should be continued with reinforcement of administrative, environmental and personal measures, including N-95 mask use for caregivers. - Nutritional support. Small meals as needed are often best for a terminally ill patient. It should be accepted that the intake will reduce as the patient\u2019s condition deteriorates and during end- of-life care. Nausea and vomiting or any other conditions that interfere with nutritional support, should be treated. - Regular medical visits. When DR-TB treatment stops, regular visits by healthcare providers and the support team should be continued to address medical needs and ensure that infection control practices are being followed. Early identification, periodic assessment and",
+        "cross_encoder_score": 4.64996337890625
+      },
+      {
+        "year": "2021",
+        "source": "data 2021.pdf",
+        "page": "44",
+        "chunk_indices": [
+          "1"
+        ],
+        "method": "PDF text",
+        "text": "d where appropriately administered drugs have not achieved necessary drug levels to deal with all population of mycobacteria. - From a programmatic perspective, weak TB services lead to delay in detection and effective treatment of drug resistance. 1.4. Prevention of drug resistance - Drug resistance cannot be addressed by mere diagnosis and treatment of DR-TB. - Basic TB diagnostic and treatment services should receive priority. - Systems for early detection and treatment of DR-TB should be integrated into existing TB services and the general health system. - Health-care facilities and congregate settings should be provided with proper infection control measures. - Transmission should be prevented by addressing non-specific determinants like access to care, comorbidities and awareness. 1.5. TB preventive treatment There is an exclusive chapter that describes the eligibility criteria, regimen, monitoring & operational aspects of implementation of preventive treatment for",
+        "cross_encoder_score": 4.531679153442383
+      },
+      {
+        "year": "2021",
+        "source": "data 2021.pdf",
+        "page": "74",
+        "chunk_indices": [
+          "3"
+        ],
+        "method": "PDF text",
+        "text": "result is correct, but it does establish standards that must be met and a framework within which non- conformities are identified and addressed. The accreditation of clinical or medical laboratories is achieved by measuring performance against ISO (International Organization for Standardization) 15189, which addresses quality systems essentials. Laboratories that confirm to ISO 15189 are accredited by the National Accreditation Board for Testing and Calibration Laboratories (NABL). TB laboratories certified by NTEP through proficiency testing protocols are also encouraged to proceed towards NABL accreditation. 3.6. Infection prevention and control (IPC) Infection prevention and control (IPC) is essential in health-care services and other settings where the risk of Mycobacterium tuberculosis transmission is high. IPC practices are vital to",
+        "cross_encoder_score": 4.517879486083984
+      }
+    ]
+  },
+  "2017|2021|management of non-tuberculous mycobacteria ntm": {
+    "old": [
+      {
+        "year": "2017",
+        "source": "Guideline for PMDT in India 2017 with messages.pdf",
+        "page": "21",
+        "chunk_indices": [
+          "0"
+        ],
+        "method": "PDF text",
+        "text": "NTM Non-Tuberculous Mycobacterium OBR Optimized background regimen Ofx Ofloxacin OPD Out Patient Department PAS p-aminosalicylic acid Pdx Pyridoxine PDR Poly drug resistance PHI Peripheral health institute PK/PD Pharmacokinetic/pharmacodynamics PL-HIV People living with HIV PMDT Programmatic management of drug-resistant tuberculosis PP Private Provider PQC Product quality compliance PSM Procurement and supply management PT Previously treated PTE Pre-treatment evaluation Pto Protionamide PvPI Pharmaco-vigilance programme of India QA Quality assurance QSE Quality System Elements R Rifampicin RNTCP Revised National Tuberculosis Control Programme RR-TB Rifampicin-resistant tuberculosis R&R Recording & reporting RT-MERM Real time medication event reminder monitor device S Streptomycin SA Statistical Assistant SAE Serious adverse event SDG Sustainable Development Goals SDS State drug store SLD Second line anti-TB drugs SLDST Second line drug susceptibility",
+        "cross_encoder_score": 5.9154953956604
+      },
+      {
+        "year": "2017",
+        "source": "Guideline for PMDT in India 2017 with messages.pdf",
+        "page": "59",
+        "chunk_indices": [
+          "1"
+        ],
+        "method": "PDF text",
+        "text": "ests by up to 50% in the private sector. IPAQT is an initiative of nonprofit stakeholders and over 100 private sector labs/hospitals (more than 5000 collection centres) with a pan-India presence that have come together to provide WHO approved tests for TB. Each patient diagnosed by these IPAQT labs must notify to the programme surveillance system (further details available at http://www.ipaqt.org/) and appropriate public health action must be offered for all noticed TB & DR-TB patients. [23] 4.11 Non Tuberculous Mycobacteria (NTM) A large number of Mycobacteria other than Mycobacterium tuberculosis are being increasingly recognized as a cause of human disease. Commonly referred to as non-TB Mycobacteria (NTM), they are also known as atypical mycobacteria, anonymous mycobacteria or mycobacteria other than tubercle bacilli (MOTT). NTM are ubiquitously distributed in the environment and hence also known as environmental mycobacteria. They are distinct from M.tb in their",
+        "cross_encoder_score": 4.5836896896362305
+      },
+      {
+        "year": "2017",
+        "source": "Guideline for PMDT in India 2017 with messages.pdf",
+        "page": "10",
+        "chunk_indices": [
+          "0"
+        ],
+        "method": "OCR",
+        "text": "4.6 Organizationanddevelopmentofthelaboratorynetwork 31 4.7 Choice of diagnostic technology 32 4.8 Specimencollection and transportationto culture-DST laboratories 32 4.9 Certification and quality assurancefor culture:DsT laboratories 35 4.10 Initiative for promoting affordable and quality TB test (IPAQT) for private sector 37 4.11 Non-tuberculous Mycobacteria (NTM) 37 Chapter 5:Case-finding 41 5.1 Case-finding strategy 41 5.2 Integrated DR-TBdiagnostic algorithm 43 5.3 Laboratory recording and reporting 46 5.4 ManagementofpatientswhileDsTresultsareawaited 46 5.5 Diagnosis of DR-TB in children 46 Chapter 6:Pretreatment evaluation 49 6.1 Referral forpretreatment evaluation 49 6.2 PretreatmentevaluationforDR-TBpatients 50 6.3 Providinghealtheducation/counsellingtopatientandfamilymembers 52 Chapter 7:Treatment of drug-resistant TB 53 7.1 Classes of anti-TB drugs recommended for treatment of DR-TB patients 53 7.2 Newer anti-TB drugs 54 7.2.1 Regulatory approvals for Bedaquiline in",
+        "cross_encoder_score": 4.00797700881958
+      },
+      {
+        "year": "2017",
+        "source": "Guideline for PMDT in India 2017 with messages.pdf",
+        "page": "229",
+        "chunk_indices": [
+          "2"
+        ],
+        "method": "PDF text",
+        "text": "ems is the non-radiometric mycobacteria growth indicator tube (MGIT) (Becton Dickinson, Sparks, MD), which contains a modified Middlebrook 7H9 broth in conjunction with a fluorescence quenching\u2013based oxygen sensor to detect mycobacterial growth. As the mycobacteria grow and deplete the oxygen present, the indicator fluoresces when subjected to ultraviolet light. Solid media: Recommended solid media include either egg based media, such as Lowenstein-Jensen agar or agar-based media such as Middlebrook 7H10 and 7H11 media. Semiquantitative (0\u20134+) reporting of NTM colony counts on solid media is recommended by the CLSI. A single positive respiratory specimen with a low colony count (e.g., broth culture",
+        "cross_encoder_score": 2.8721792697906494
+      }
+    ],
+    "new": [
+      {
+        "year": "2021",
+        "source": "data 2021.pdf",
+        "page": "256",
+        "chunk_indices": [
+          "0"
+        ],
+        "method": "PDF text",
+        "text": "216 GUIDELINES FOR PROGRAMMATIC MANAGEMENT OF DRUG RESISTANT TB IN INDIA 2021 Annexure 6: Diagnosis and management of non-Mycobacterium Tuberculosis (NTM) A large number of Mycobacteria other than Mycobacterium tuberculosis are being increasingly recognized as a cause of human disease. Commonly referred to as non-TB Mycobacteria (NTM), they are also known as atypical mycobacteria, anonymous mycobacteria or mycobacteria other than tubercle bacilli (MOTT). NTM are ubiquitously distributed in the environment and hence also known as environmental mycobacteria. They are distinct from M. tb in their characteristics that they can survive outside the human or animal host. They are generally nonpathogenic or opportunistic pathogens and most commonly causes disease when there is immunosuppression or injury, except for few species which infect immune- competent humans. Often these bacteria inhabit the respiratory passages in the form of commensal organisms. Pulmonary infection from NTM",
+        "cross_encoder_score": 7.185985565185547
+      },
+      {
+        "year": "2021",
+        "source": "data 2021.pdf",
+        "page": "34",
+        "chunk_indices": [
+          "1"
+        ],
+        "method": "PDF text",
+        "text": "Diseases NMC National Medical Commission NPY Nikshay Poshan Yojana NRL National reference laboratory NSP National strategic plan NTEG National Technical Expert Group NTEP National Tuberculosis Elimination Programme NTI National TB institute NTM Non-Tuberculous Mycobacterium Ofx Ofloxacin OPD out-patient department PAS p-aminosalicylic acid PCR Polymerase Chain Reaction Pdx Pyridoxine PDR Poly drug resistance PFMS Public Financial Management System PHA public health action PK/PD Pharmacokinetic/ pharmacodynamics PLHIV People living with HIV PMDT Programmatic management of drug-resistant tuberculosis",
+        "cross_encoder_score": 5.330201148986816
+      },
+      {
+        "year": "2021",
+        "source": "data 2021.pdf",
+        "page": "27",
+        "chunk_indices": [
+          "2"
+        ],
+        "method": "PDF text",
+        "text": "ea 209 Annexure 5: \u0007Guidance for establishment of \u201cState level \u2013 Difficult-to-treat TB clinic (S-DT3C)\u201d 212 Annexure 6: \u0007Diagnosis and management of non-Mycobacterium Tuberculosis (NTM) 216 Annexure 7: \u0007TB bacteriology request form 219 Annexure 8: \u0007Health and safety guidelines for staff/ workers involved in sputum transportation 221 Annexure 9: \u0007Standard operative procedure for collection, transportation and processing of extra-pulmonary specimens 223 Annexure 10: \u0007Biomedical waste management 227 Annexure 11: \u0007Evidence of efficacy and safety of second-line anti-TB drugs 230 Annexure 12: \u0007DR-TB counselling tool 232 Annexure 13: \u0007DR-TB counselling register 234 Annexure 14: \u0007Definition of QTc interval 235",
+        "cross_encoder_score": 4.467646598815918
+      },
+      {
+        "year": "2021",
+        "source": "data 2021.pdf",
+        "page": "257",
+        "chunk_indices": [
+          "0"
+        ],
+        "method": "PDF text",
+        "text": "217 GUIDELINES FOR PROGRAMMATIC MANAGEMENT OF DRUG RESISTANT TB IN INDIA 2021 Most frequently isolated non-TB Mycobacteria and their sites of infection Species Main site of infection Growth rate M. avium complex (M.avium, M. intracellulare, minor species) Pulmonary, lymph nodes, disseminated disease Slow M. kansasii Pulmonary, disseminated disease Slow M. xenopi Pulmonary Slow M. malmoense (NW Europe) Pulmonary Slow M. ulcerans Skin Slow M. marinum Skin Intermediate M. abscessus Pulmonary, skin Rapid M. chelonae Skin, soft tissues, disseminated disease Rapid M. fortuitum Skin, soft tissues, pulmonary Rapid M. scrofulaceum Lymph nodes M. haemophilum Disseminated disease The minimum evaluation of a patient presenting with features suggestive of non-TB Mycobacterial (NTM) lung disease should include the following: - chest radiograph or chest high-resolution computed tomography (HRCT) scan. HRCT may be done in settings where access to this technology is available. However, it is not",
+        "cross_encoder_score": 4.397897720336914
+      }
+    ]
+  },
+  "2017|2021|bpalm eligibility criteria and pretomanid": {
+    "old": [
+      {
+        "year": "2017",
+        "source": "Guideline for PMDT in India 2017 with messages.pdf",
+        "page": "77",
+        "chunk_indices": [
+          "1"
+        ],
+        "method": "PDF text",
+        "text": "on Limited, India) that is guided by apex committee approval. The drug was approved for conditional access. This means, it shall be used under RNTCP PMDT framework for treatment of MDR-TB patients only with aDSM systems. [4] In March 2016, RNTCP introduced BDQ through a conditional access programme at six DR-TBCs in the country. Based on the lessons learnt from these initial sites, preparation for expansion of access to BDQ was initiated in all states in 2017. 7.2.2 Criteria for patients to receive Bedaquiline Inclusion criteria The criterion for patients to receive BDQ as approved by the Apex Committee is: adults aged > 18 years having pulmonary MDR-TB. Additional requirements - non-pregnant females or females not on hormonal birth control methods are eligible. They should be willing to continue practicing birth control methods throughout the treatment period or have been post-menopausal for past 2 years; and - patients with controlled stable arrhythmia can be",
+        "cross_encoder_score": -8.221319198608398
+      },
+      {
+        "year": "2017",
+        "source": "Guideline for PMDT in India 2017 with messages.pdf",
+        "page": "61",
+        "chunk_indices": [
+          "0",
+          "1",
+          "2"
+        ],
+        "method": "PDF text",
+        "text": "39 - expert consultation should be obtained when NTM are recovered that are either infrequently encountered or that usually represent environmental contamination. Patients suspected of having NTM lung disease but who do not meet the diagnostic criteria should be followed until the diagnosis is \ufb01rmly established or excluded; and - making the diagnosis of NTM lung disease does not, per se, necessitate the institution of therapy, which is a decision based on potential risks and bene\ufb01ts of therapy for individual patients. Clinical, radiological and microbiological criteria are equally important and all must be met to make a diagnosis of NTM lung disease. The following criteria apply to symptomatic patients with radiographic opacities, nodular or cavitary or an HRCT scan that shows multifocal bronchiectasis with multiple small nodules. These criteria best \ufb01t with Mycobacterium avium complex (MAC), M. Kansasii and M. Abscessus. Clinical - pulmonary symptoms include cough, hemoptysis, fever, weight loss or organ specific signs and symptoms etc.; and - exclusion of any other etiologies. Radiological - radiological findings pertain to nodular or cavitary opacities on chest radiograph; and/or - HRCT scan that shows multifocal bronchiectasis with multiple small nodules. Microbiological Table 4.2: Microbiologic criteria for diagnosis of NTM lung disease Specimen Result At least three results available with; OR Two positive cultures regardless of the results of AFB smear Single available bronchial wash or lavage with; OR One positive culture regardless of the results of AFB smear Tissue biopsy with: Compatible histopathology- (granulomatous inflammation) and a positive biopsy culture for NTM Compatible histopathology- (granulomatous inflammation) and a positive sputum or bronchial wash culture for NTM Guidelines for making the diagnosis of NTM-pulmonary disease - clinical features of an indolent, respiratory disease include cough, expectoration, fever and other constitutional symptoms;",
+        "cross_encoder_score": -8.395237922668457
+      },
+      {
+        "year": "2017",
+        "source": "Guideline for PMDT in India 2017 with messages.pdf",
+        "page": "23",
+        "chunk_indices": [
+          "0",
+          "1",
+          "2"
+        ],
+        "method": "PDF text",
+        "text": "1 Chapter 1: Background and framework for effective control of drug- resistant tuberculosis Globally, the first WHO endorsed PMDT services began in the year 2000. At that time, the Green Light Committee (GLC) was established to promote access to high quality second-line drugs for appropriate use in TB programmes. In 2002, the Global Fund to Fight AIDS, TB and Malaria (GFATM) started financing TB programmes, including DR-TB, thus greatly reducing the economic barrier to countries for DR-TB services. Since then, PMDT services have expanded rapidly. Based on data and experience from these projects and practices, further scientific evidence continues to evolve with respect to services for DR-TB. 1.1 History of PMDT in India After successfully establishing RNTCP services across the country in 2006, the PMDT services were introduced in 2007 and complete geographic coverage was achieved by 2013. [1] To begin with, DR-TB services were offered to the subset of TB patients with the highest risk to develop drug resistance i.e., treatment failures. This was followed by a horizontal and vertical scale-up. Definite criteria were set to assess the risk and eligibility for the drug susceptibility test (DST). The DST was thus offered to TB patients who remained smear positive during follow-up; to previously treated patients; those who were HIV positive and people who had contact with a known DR-TB patient. [2] This would then lead to universal DST, i.e., DST to all diagnosed and notified TB patients. To conduct this, huge laboratory capacity in terms of geographic coverage, DST technology, trained laboratory personnel, quality assurance and certification were required. From a few national reference laboratories (NRL), and state level Intermediate reference laboratories (IRL) with solid or liquid culture and DST facilities, the country expanded its capacity to a wide network of state and regional level intermediate reference laboratories with solid and liquid culture DST and Line Probe Assay (LPA) and district level network of Cartridge Based Nucleic Acid Tests (CBNAAT). [1] [3] Providing treatment to diagnosed DR-TB patients is extremely important. To begin with, only MDR-TB patients were offered treatment with a standard second-line regimen. Later, treatment with standard regimen was offered to extensively drug resistant (XDR) TB patients and MDR-TB with additional resistance to quinolone or second-line injectable. Procurement and supply chain management of second-line drugs is complex, since no standardized patient-wise boxes are manufactured, shorter shelf-life of some drugs and drugs do need temperature regulated storage and",
+        "cross_encoder_score": -9.434185981750488
+      }
+    ],
+    "new": [
+      {
+        "year": "2021",
+        "source": "data 2021.pdf",
+        "page": "116",
+        "chunk_indices": [
+          "2"
+        ],
+        "method": "PDF text",
+        "text": "ommendation - BPaL research proposal may be considered with flexibility to adapt with anticipated results of ZeNix trial with 4 arms of reduce dosage and duration of Linezolid in BPaL; and - In exceptional cases, BPaL can be considered as a last resort by NTEP under prevailing ethical standards in individual patients for whom the design of an effective regimen is not possible as per WHO recommendations Implementation considerations - Pretomanid is approved by DCGI for use as part of BPaL regimen for conditional access under NTEP; - In exceptional cases where an effective longer oral M/XDR-TB regimen cannot be designed with available drugs, NDR-TBC/state DT3C may send their case to national DT3C for clinical decision support and recommendations for BPaL; - Initial hospitalization for 15 days at NDR-TBC ward is necessary to closely monitor tolerability; - Active pharmacovigilance and proper management of adverse drug reactions, and prevention of complications from drug\u2013drug",
+        "cross_encoder_score": 2.7243616580963135
+      },
+      {
+        "year": "2021",
+        "source": "data 2021.pdf",
+        "page": "115",
+        "chunk_indices": [
+          "0",
+          "1"
+        ],
+        "method": "PDF text",
+        "text": "GUIDELINES FOR PROGRAMMATIC MANAGEMENT OF DRUG RESISTANT TB IN INDIA 2021 75 Adverse Drug Events Drugs Tendonitis and tendon rupture FQ Nephrotoxicity (renal toxicity) Am Vestibular toxicity (tinnitus and dizziness) Am, Cs, FQs, Eto, Lzd Hearing loss Am Optic neuritis E, Lzd, Eto, Cfz, Metallic taste Eto, FQs Electrolyte disturbances (Hypokalaemia and Hypomagnesaemia) Am Gynaecomastia Eto Alopecia Eto Superficial fungal infection and thrush FQ Lactic acidosis Lzd Dysglycaemia and Hyperglycaemia Eto 4.8. Bedaquiline, Pretomanid, Linezolid (BPaL) regimen Box 4.3: BPaL regimen for MDR-TB with additional FQ resistance New WHO recommendations - A treatment regimen lasting 6-9 months, composed of Bedaquiline, pretomanid and linezolid (BPaL) may be used under operational research conditions in MDR-TB patients with TB that is resistant to fluoroquinolones, who have either no previous exposure to Bedaquiline and linezolid or have been exposed for no more than 2 weeks; and - This is a new recommendation for a defined patient group; it is to be used under operational research conditions, and thus does not apply to routine programmatic use. Evidence (Conradie F, et al NEJM. 2020 Mar 5;382(10):893-902 (Nix TB trial)): - BPaL showed 90% favourable outcomes among XDR (89%), MDR with FQ resistance, treatment intolerant /non responders (92%); and - Peripheral neuropathy 81%, myelosupression 48%, all managed often with dose reductions or interruptions in treatment with linezolid. For inclusion/exclusion criteria, sub-group and other details, WHO Consolidated Guidelines on Tuberculosis, Module 4: Treatment - Drug-Resistant Tuberculosis, 2020 can be referred. Dosage & duration - Pretomanid - 200 mg once daily for 26 weeks, Bedaquiline - 400 mg once daily for the first 2 weeks of treatment (days 1\u201314) and then 200 mg three",
+        "cross_encoder_score": -3.4758105278015137
+      },
+      {
+        "year": "2021",
+        "source": "data 2021.pdf",
+        "page": "45",
+        "chunk_indices": [
+          "1"
+        ],
+        "method": "PDF text",
+        "text": "nd longer oral M/XDR-TB regimen based on DST/DRT results with scope in difficult patients to extend Bdq beyond 6 months, combined use of Bdq and Dlm and Bdq use in pregnancy. - As the fully oral regimens get scaled up nationwide, the current shorter MDR-TB regimen with injectable SLDs will be phased out. - Injectable SLDs will be available for use under PMDT to substitute oral SLDs based on DST and ADR. - Guidance is also provided for using Bdq for children above 5 years and Dlm for children above 6 years. - Use of BPaL regimen consisting of Bdq, pretomanid (Pa) & linezolid (Lzd) are ongoing in select group of patients on a research mode. 1.9. Sustaining and improving the quality of DR-TB care - PMDT ensures decentralized management of DR-TB patients. - Availability of in-patient care, drugs and mentoring/guidance have been ensured for N/ DDR-TBC. - All treatment regimen including shorter oral Bedaquiline-containing MDR/RR-TB regimen and longer oral M/XDR-TB regimen are",
+        "cross_encoder_score": -3.906277656555176
+      }
+    ]
+  }
+}

@@ -627,12 +627,51 @@ BACKEND_DIR = PROJECT_DIR / "backend"
 if str(BACKEND_DIR) not in sys.path:
     sys.path.insert(0, str(BACKEND_DIR))
 
+import threading
+from concurrent.futures import ThreadPoolExecutor
+
 
 @st.cache_resource(show_spinner="Connecting to the TB guideline retrieval system...")
 def load_rag_engine():
     """Load the existing RAG engine once per Streamlit process."""
     import rag_engine
     return rag_engine
+
+
+@st.cache_resource(show_spinner=False)
+def load_precomputed_caches():
+    """Load persistent precomputed caches for presentation speedups."""
+    import json
+    qa_path = BACKEND_DIR / "precomputed_qa_cache.json"
+    version_path = BACKEND_DIR / "precomputed_version_cache.json"
+    qa_data = {}
+    version_data = {}
+    if qa_path.exists():
+        try:
+            with qa_path.open("r", encoding="utf-8") as f:
+                qa_data = json.load(f)
+        except Exception:
+            pass
+    if version_path.exists():
+        try:
+            with version_path.open("r", encoding="utf-8") as f:
+                version_data = json.load(f)
+        except Exception:
+            pass
+    return qa_data, version_data
+
+
+def _background_engine_warmup():
+    try:
+        load_rag_engine()
+    except Exception:
+        pass
+
+
+# Start background engine warm-up on app launch so it is warm before user navigates
+if "engine_prewarmed" not in st.session_state:
+    st.session_state["engine_prewarmed"] = True
+    threading.Thread(target=_background_engine_warmup, daemon=True).start()
 
 
 @st.cache_resource(show_spinner=False)
@@ -1216,10 +1255,35 @@ elif page == "Ask TB Guidelines":
         "evidence and the local RAG engine attempts a cited answer."
     )
 
+    pre_qa, _ = load_precomputed_caches()
+    if "qa_cache" not in st.session_state:
+        st.session_state["qa_cache"] = dict(pre_qa)
+    else:
+        for k, v in pre_qa.items():
+            if k not in st.session_state["qa_cache"]:
+                st.session_state["qa_cache"][k] = v
+
+    st.markdown("**Suggested Research Questions:**")
+    qa_suggestions = [
+        "What are the major objectives of the TB control guidelines?",
+        "What treatment regimens are recommended for MDR-TB?",
+        "What are the eligibility criteria for BPaLM treatment?",
+        "How should adverse drug reactions during TB treatment be managed?",
+        "How should patients receiving drug-resistant TB treatment be monitored?"
+    ]
+    sug_q_cols = st.columns(len(qa_suggestions))
+    for i, col in enumerate(sug_q_cols):
+        with col:
+            if st.button(f"📌 {qa_suggestions[i][:20]}...", key=f"qa_chip_{i}"):
+                st.session_state["active_research_question"] = qa_suggestions[i]
+
+    active_q = st.session_state.get("active_research_question", "")
+
     with st.form("question_form"):
 
         question = st.text_area(
             "Your research question",
+            value=active_q,
             placeholder=(
                 "Example: How do the guidelines describe monitoring "
                 "and management of adverse drug reactions?"
@@ -1238,9 +1302,6 @@ elif page == "Ask TB Guidelines":
             st.warning("Please enter a research question.")
 
         else:
-            if "qa_cache" not in st.session_state:
-                st.session_state["qa_cache"] = {}
-
             cache_key = question.strip().lower()
 
             if cache_key in st.session_state["qa_cache"]:
@@ -1258,7 +1319,7 @@ elif page == "Ask TB Guidelines":
                     ):
                         try:
                             result = engine.answer_question(question.strip())
-                            if result and result.get("generation_success"):
+                            if result:
                                 st.session_state["qa_cache"][cache_key] = result
 
                         except Exception as exc:
@@ -1364,6 +1425,14 @@ elif page == "Version Comparison":
         placeholder="Example: Rapid molecular testing, Bedaquiline eligibility, adverse reactions..."
     )
 
+    _, pre_version = load_precomputed_caches()
+    if "version_cache" not in st.session_state:
+        st.session_state["version_cache"] = dict(pre_version)
+    else:
+        for k, v in pre_version.items():
+            if k not in st.session_state["version_cache"]:
+                st.session_state["version_cache"][k] = v
+
     if st.button(
         "⇄  Compare Guideline Versions",
         width="stretch"
@@ -1378,30 +1447,43 @@ elif page == "Version Comparison":
             )
 
         else:
+            comp_key = f"{old_year}|{new_year}|{topic.strip().lower()}"
+            cached_data = st.session_state["version_cache"].get(comp_key)
 
-            engine, error = safe_load_engine()
-
-            if error:
-                st.error("The retrieval engine could not be loaded.")
-                st.code(error)
-
+            if cached_data:
+                old_results = cached_data.get("old", [])
+                new_results = cached_data.get("new", [])
             else:
+                engine, error = safe_load_engine()
 
-                with st.spinner(
-                    f"Retrieving independent evidence for {old_year} and {new_year}..."
-                ):
+                if error:
+                    st.error("The retrieval engine could not be loaded.")
+                    st.code(error)
+                    old_results, new_results = [], []
 
-                    try:
-                        old_results = get_retrieval_results(
-                            engine, topic.strip(), year=old_year, top_k=4
-                        )
-                        new_results = get_retrieval_results(
-                            engine, topic.strip(), year=new_year, top_k=4
-                        )
+                else:
+                    with st.spinner(
+                        f"Retrieving independent evidence for {old_year} and {new_year} in parallel..."
+                    ):
+                        try:
+                            with ThreadPoolExecutor(max_workers=2) as executor:
+                                future_old = executor.submit(
+                                    get_retrieval_results, engine, topic.strip(), old_year, 4
+                                )
+                                future_new = executor.submit(
+                                    get_retrieval_results, engine, topic.strip(), new_year, 4
+                                )
+                                old_results = future_old.result()
+                                new_results = future_new.result()
 
-                    except Exception as exc:
-                        old_results, new_results = [], []
-                        st.exception(exc)
+                            st.session_state["version_cache"][comp_key] = {
+                                "old": old_results,
+                                "new": new_results
+                            }
+
+                        except Exception as exc:
+                            old_results, new_results = [], []
+                            st.exception(exc)
 
                 left, right = st.columns(2)
 

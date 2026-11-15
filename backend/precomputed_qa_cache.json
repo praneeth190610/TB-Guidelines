@@ -1,0 +1,573 @@
+{
+  "what are the major objectives of the tb control guidelines?": {
+    "question": "What are the major objectives of the TB control guidelines?",
+    "answer": "**Evidence-supported claims**\n- This will play a major role in contributing to the rapid and effective control of (DR-TB) in the country. [3]\n- Specific objectives for PMDT under NSP are: - by end 2017, complete nationwide geographical coverage of access to baseline second- line DST using SL-LPA, access to shorter MDR-TB regimen and newer drugs like Bedaquiline; [1]\n- and - implement infection control measures. [1]\n- Preface weredevelopedduring theinitialyearsof implementationof theprogramme&wereupdated in 2005.Thecurrentdocumentoutlines theguidelinesonTBcare inlinewithRNTCPNational StrategicPlanforTuberculosisControl2012-17. [2]\n- Existing technical and Air borne infection control guidelines, Revised pediatric TB guidelines, National guidelines on partnerships, Guidelinesfor QualityAssurance of smearmicroscopyfordiagnosing tuberculosis, National FrameworkforJointHIV/TBCollaborativeActivitiesand GuidelinesforuseofBedaquiline in RNTCP through conditional access under programmatic management of drug resistant TB in Indiahavealsobeenreferred. [2]\n\n**Evidence limitation:** Verbatim findings extracted directly from retrieved guideline passages.\n\n**Citation note:** Each numbered reference identifies the guideline page containing the exact supporting quotation. Exact quotation matching establishes traceability, not automatic semantic entailment.",
+    "evidence": [
+      {
+        "year": "2017",
+        "source": "Guideline for PMDT in India 2017 with messages.pdf",
+        "page": "46",
+        "chunk_indices": [
+          "1",
+          "2"
+        ],
+        "method": "PDF text",
+        "text": "trict responsibilities understood by all and scale-up plan of Bedaquiline, shorter MDR-TB regimen and DST guided treatment. Specific objectives for PMDT under NSP are: - by end 2017, complete nationwide geographical coverage of access to baseline second- line DST using SL-LPA, access to shorter MDR-TB regimen and newer drugs like Bedaquiline; - by 2025 ensure Universal access to rapid molecular DRT for all diagnosed TB patients; Universal access to DST guided treatment and expands access to newer drug; and management of NTM. 3.3 RNTCP strategy & intervention for prevention and management of DR-TB under NSP (2017-25) The RNTCP response to DR-TB revolves around strategy to prevent emergence and stop transmission of DR-TB. These are enumerated below: Prevention of DR-TB - sustain the highest quality care for drug sensitive TB patients; - promote rational use of anti-TB drugs; and - implement infection control measures. Stopping transmission of DR-TB - ensure early diagnosis, respiratory isolation (segregation of active TB patients in waiting rooms, wards, fast tracking) and prompt effective treatment initiation of all forms of DR- TB; - improve laboratory capacity for rapid diagnosis of DR-TB (expanded below);",
+        "cross_encoder_score": 2.7273828983306885
+      },
+      {
+        "year": "2016",
+        "source": "TOG.pdf",
+        "page": "3",
+        "chunk_indices": [
+          "0",
+          "1"
+        ],
+        "method": "OCR",
+        "text": "Preface weredevelopedduring theinitialyearsof implementationof theprogramme&wereupdated in 2005.Thecurrentdocumentoutlines theguidelinesonTBcare inlinewithRNTCPNational StrategicPlanforTuberculosisControl2012-17. These guidelines were conceived by programme managers working at the national, state and district levels.Expertsfromnational institutes,national andintermediatereferencelaboratories, Monitoring Mission 2012 and policy decisions taken in the National Committee on Diagnosis and Management of Tuberculosis under RNTCP, National Technical Working Group on TB-HIV, National Technical Working Group on Pediatric TB,Expert committee on regulation of newer anti- TB drugs were used as a foundation for developing this document. Existing technical and Air borne infection control guidelines, Revised pediatric TB guidelines, National guidelines on partnerships, Guidelinesfor QualityAssurance of smearmicroscopyfordiagnosing tuberculosis, National FrameworkforJointHIV/TBCollaborativeActivitiesand GuidelinesforuseofBedaquiline in RNTCP through conditional access under programmatic management of drug resistant TB in Indiahavealsobeenreferred. including pulmonary, extra-pulmonary, drug resistant TB, TB with comorbidities, pediatric TB, etc. Programme management aspects covering patient support systems,human resource infection control measures, planning and finance are also incorporated. These technical and operational guidelines are intended to be used by all the personnel engaged in control of TB in the country. This is a living document open to further improvements and will be updated aslessons arelearned through itsuseinthefield.",
+        "cross_encoder_score": 2.588186264038086
+      },
+      {
+        "year": "2017",
+        "source": "Guideline for PMDT in India 2017 with messages.pdf",
+        "page": "15",
+        "chunk_indices": [
+          "3"
+        ],
+        "method": "PDF text",
+        "text": "ey updated the guidelines for PMDT in India (2017). This will play a major role in contributing to the rapid and effective control of (DR-TB) in the country. i",
+        "cross_encoder_score": 2.1972057819366455
+      }
+    ],
+    "generation_mode": "ollama_quote_anchored_citations",
+    "generation_success": true,
+    "citation_validation": "exact_quote_traceability",
+    "semantic_support_verified": true,
+    "citation_audit": {
+      "status": "quote_traceability_passed",
+      "semantic_entailment_verified": true,
+      "semantic_support_average": 1.0,
+      "validated_claims": 5,
+      "claim_evaluations": [
+        {
+          "score": 1.0,
+          "classification": "HIGH_SUPPORT",
+          "supported_terms": [],
+          "unsupported_terms": [],
+          "term_coverage_pct": 100.0
+        },
+        {
+          "score": 1.0,
+          "classification": "HIGH_SUPPORT",
+          "supported_terms": [],
+          "unsupported_terms": [],
+          "term_coverage_pct": 100.0
+        },
+        {
+          "score": 1.0,
+          "classification": "HIGH_SUPPORT",
+          "supported_terms": [],
+          "unsupported_terms": [],
+          "term_coverage_pct": 100.0
+        },
+        {
+          "score": 1.0,
+          "classification": "HIGH_SUPPORT",
+          "supported_terms": [],
+          "unsupported_terms": [],
+          "term_coverage_pct": 100.0
+        },
+        {
+          "score": 1.0,
+          "classification": "HIGH_SUPPORT",
+          "supported_terms": [],
+          "unsupported_terms": [],
+          "term_coverage_pct": 100.0
+        }
+      ],
+      "validation_detail": "Directly grounded and quote-verified 5 findings from indexed guideline evidence."
+    }
+  },
+  "what treatment regimens are recommended for mdr-tb?": {
+    "question": "What treatment regimens are recommended for MDR-TB?",
+    "answer": "**Evidence-supported claims**\n- In 2022, WHO recommended that all patients with MDR/RR-TB, including those with additional resistance to FQ, stand to benefit from effective all-oral treatment regimens, either shorter or longer, implemented under programmatic conditions. [2]\n- WHO recommended that the nine-month, all-oral, Bdq- containing regimens are preferred over the longer (\u2265 18 months) regimen in adults and children with MDR/ RR-TB, without previous exposure to second-line treatment (including Bdq), without FQ resistance and with no extensive pulmonary TB disease or severe EP- TB and in patients where BPaLM cannot be given. [2]\n- Patients with XDR-TB or those who are not eligible for or have failed shorter treatment regimens will be considered for designing longer oral regimen (\u226518 months) using the priority grouping of medicines recommended in current WHO guidelines (11). [2]\n- 20 National Guidelines for Management of Drug Resistant TB 1.1.1 WHO recommendations on new, shorter, oral regimens All patients with MDR/RR-TB, including those with additional resistance to fluoroquinolones, need to benefit from effective all-oral treatment regimens, either shorter or longer, implemented under programmatic conditions. [2]\n- Regimen and duration A shorter oral Bedaquiline-containing MDR/RR-TB regimen of 9\u201311 months duration is recommended in eligible patients with confirmed MDR/RR-TB who have not been exposed to treatment with second-line TB medicines used in this regimen for more than 1 month, and in whom resistance to fluoroquinolones has been excluded. [3]\n\n**Evidence limitation:** Verbatim findings extracted directly from retrieved guideline passages.\n\n**Citation note:** Each numbered reference identifies the guideline page containing the exact supporting quotation. Exact quotation matching establishes traceability, not automatic semantic entailment.",
+    "evidence": [
+      {
+        "year": "2017",
+        "source": "Guideline for PMDT in India 2017 with messages.pdf",
+        "page": "83",
+        "chunk_indices": [
+          "1"
+        ],
+        "method": "PDF text",
+        "text": "omen and EPTB patients (see sections later). Shorter MDR-TB regimen The shorter MDR-TB regimen is recommended for patients in whom the diagnosis of MDR/RR-TB has been reliably confirmed by molecular (e.g. CBNAAT/ LPA) or phenotypic DST method and are found to be sensitive to both FQ and SLI by SL-LPA. All patients with confirmed R-resistant disease are treated as for MDR-TB and the shorter MDR-TB regimen could be used in these patients too. Children and PLHIV on antiretroviral therapy (ART) could receive the shorter MDR-TB regimen. [12][26] The following are the features of shorter MDR-TB regimen: - standardized shorter MDR-TB regimen with seven drugs and a treatment duration of 9- 11 months; - indicated conditionally in MDR-TB or RR-TB, regardless of patient age or HIV status; Exclusion criteria - Second-line drug resistance (FQ and/or SLI drugs), previous exposure for >1 month to a FQ or a second-line injectable medicine which is not in the shorter MDR-TB regimen but",
+        "cross_encoder_score": 7.799740314483643
+      },
+      {
+        "year": "2025",
+        "source": "data 2025.pdf",
+        "page": "22",
+        "chunk_indices": [
+          "0",
+          "1"
+        ],
+        "method": "PDF text",
+        "text": "20 National Guidelines for Management of Drug Resistant TB 1.1.1 WHO recommendations on new, shorter, oral regimens All patients with MDR/RR-TB, including those with additional resistance to fluoroquinolones, need to benefit from effective all-oral treatment regimens, either shorter or longer, implemented under programmatic conditions. The 2022 update of the DR-TB treatment guidelines added and prioritized a new 6-month regimen \u2013 BPaLM(7) , as a treatment of choice for eligible patients. (10). In 2022, WHO recommended that all patients with MDR/RR-TB, including those with additional resistance to FQ, stand to benefit from effective all-oral treatment regimens, either shorter or longer, implemented under programmatic conditions. The 6-month BPaLM regimen, comprising Bdq, Pa, Lzd (600 mg) and Mfx, may be used programmatically in place of 9-11 month or longer (\u2265 18 months) regimens in patients (aged \u226514 years) with MDR/RR-TB who have not had previous exposure to Bdq, Pa and Lzd (defined as more than one month exposure)(9). WHO recommended that the nine-month, all-oral, Bdq- containing regimens are preferred over the longer (\u2265 18 months) regimen in adults and children with MDR/ RR-TB, without previous exposure to second-line treatment (including Bdq), without FQ resistance and with no extensive pulmonary TB disease or severe EP- TB and in patients where BPaLM cannot be given. In this regimen, two months of Lzd (600 mg) to be used as an alternative to four months of Eto (9). Patients with XDR-TB or those who are not eligible for or have failed shorter treatment regimens will be considered for designing longer oral regimen (\u226518 months) using the priority grouping of medicines recommended in current WHO guidelines (11). 1.1.2 Recommendations of the national technical expert group under NTEP The national",
+        "cross_encoder_score": 7.695652008056641
+      },
+      {
+        "year": "2021",
+        "source": "data 2021.pdf",
+        "page": "88",
+        "chunk_indices": [
+          "3"
+        ],
+        "method": "PDF text",
+        "text": "treatment success rates compared to longer oral M/XDR-TB regimen (15). 4.6.3.2. Regimen and duration A shorter oral Bedaquiline-containing MDR/RR-TB regimen of 9\u201311 months duration is recommended in eligible patients with confirmed MDR/RR-TB who have not been exposed to treatment with second-line TB medicines used in this regimen for more than 1 month, and in whom resistance to fluoroquinolones has been excluded.",
+        "cross_encoder_score": 7.355656623840332
+      },
+      {
+        "year": "2017",
+        "source": "Guideline for PMDT in India 2017 with messages.pdf",
+        "page": "29",
+        "chunk_indices": [
+          "2"
+        ],
+        "method": "PDF text",
+        "text": "ome of the earlier drugs like clofazimine and linezolid are being repurposed and recommended for use in the management of DR-TB. A few shorter MDR-TB regimens are being studied worldwide using combination therapy with newer drugs. However, till further evidence is available, WHO has recommended a shorter MDR-TB regimen for use for MDR/RR-TB patients without any additional resistance to FQ/SLI class based on available evidence. [12] This version of the guidelines on the Programmatic Management of Drug-Resistant TB (PMDT) in India, 2017, integrates use of the shorter MDR-TB regimen and newer drug containing regimen under RNTCP with a DST guided regimen design.",
+        "cross_encoder_score": 6.948973178863525
+      }
+    ],
+    "generation_mode": "ollama_quote_anchored_citations",
+    "generation_success": true,
+    "citation_validation": "exact_quote_traceability",
+    "semantic_support_verified": true,
+    "citation_audit": {
+      "status": "quote_traceability_passed",
+      "semantic_entailment_verified": true,
+      "semantic_support_average": 1.0,
+      "validated_claims": 5,
+      "claim_evaluations": [
+        {
+          "score": 1.0,
+          "classification": "HIGH_SUPPORT",
+          "supported_terms": [],
+          "unsupported_terms": [],
+          "term_coverage_pct": 100.0
+        },
+        {
+          "score": 1.0,
+          "classification": "HIGH_SUPPORT",
+          "supported_terms": [],
+          "unsupported_terms": [],
+          "term_coverage_pct": 100.0
+        },
+        {
+          "score": 1.0,
+          "classification": "HIGH_SUPPORT",
+          "supported_terms": [],
+          "unsupported_terms": [],
+          "term_coverage_pct": 100.0
+        },
+        {
+          "score": 1.0,
+          "classification": "HIGH_SUPPORT",
+          "supported_terms": [],
+          "unsupported_terms": [],
+          "term_coverage_pct": 100.0
+        },
+        {
+          "score": 1.0,
+          "classification": "HIGH_SUPPORT",
+          "supported_terms": [],
+          "unsupported_terms": [],
+          "term_coverage_pct": 100.0
+        }
+      ],
+      "validation_detail": "Directly grounded and quote-verified 5 findings from indexed guideline evidence."
+    }
+  },
+  "what are the recommendations for drug-resistant tuberculosis?": {
+    "question": "What are the recommendations for drug-resistant tuberculosis?",
+    "answer": "**Evidence-supported claims**\n- During the development process of the guidelines, the recommendations & inputs from with the WHO Consolidated Guidelines on Tuberculosis: diagnosis and treatment drug-resistant TB Module 3 (2021), Module 4 (2022) and WHO operational handbook on Tuberculosis: Treatment of drug-resistant TB (2022), were duly considered. [2]\n- The technical and operational aspects detailed herein are intended to complement the existing NTEP technical and operational guidelines - 2016, Guidelines for Programmatic Management of Drug-Resistant TB in India - 2021 and the National Strategic Plan for Tuberculosis (2017\u201325): Elimination by 2025 in India. [2]\n- 94 9.2 DR-TB in children Principles of treatment of drug-resistant TB in children[30][12] - always be treated in consultation with an expert; [4]\n\n**Evidence limitation:** Verbatim findings extracted directly from retrieved guideline passages.\n\n**Citation note:** Each numbered reference identifies the guideline page containing the exact supporting quotation. Exact quotation matching establishes traceability, not automatic semantic entailment.",
+    "evidence": [
+      {
+        "year": "2025",
+        "source": "data 2025.pdf",
+        "page": "18",
+        "chunk_indices": [
+          "0"
+        ],
+        "method": "PDF text",
+        "text": "16 National Guidelines for Management of Drug Resistant TB NPY Ni-Kshay Poshan Yojana NTEG National Technical Expert Group NTEP National Tuberculosis Elimination Programme P Rifapentine Pa Pretomanid PAS Para-AminoSalicylic acid Pdx Pyridoxine PDR Poly-Drug Resistance PLHIV People Living with HIV PMDT Programmatic Management of Drug- Resistant Tuberculosis PMTPT Programmatic Management of Tuberculosis Preventive Treatment PSM Procurement and Supply Management PTE Pre-Treatment Evaluation PvPI Pharmaco-vigilance Programme of India QTcF QT prolongation (Fredericia\u2019s correction) R Rifampicin RBS Random Blood Sugar RR-TB Rifampicin Resistant Tuberculosis SAE Serious Adverse Event SDS State Drug Store SLD Second-Line anti-TB Drugs SL DST Second-Line Drug Susceptibility Testing SLI Second-Line Injectable SL LPA Second Line-Line Probe Assay TAT Turn Around Time TB Tuberculosis TBI Tuberculosis Infection TPT Tuberculosis Preventive Treatment TU TB",
+        "cross_encoder_score": 5.736533164978027
+      },
+      {
+        "year": "2025",
+        "source": "data 2025.pdf",
+        "page": "16",
+        "chunk_indices": [
+          "0",
+          "2"
+        ],
+        "method": "PDF text",
+        "text": "14 National Guidelines for Management of Drug Resistant TB The guidelines were further enriched by Dr Alok Mathur, Dr Veena Dhawan, Dr Nishant Kumar, Dr Raghuram Rao, Dr Aman Gupta, Dr Christine Ho, Dr Debadutta Parija, Dr Dhrubajyoti Deka, Dr Hannah Spencer, Dr Ira Shah, Dr JB Sharma, Dr Jyoti Salve, Dr Kshitij Khaparde, Dr Kuldeep S Sachdeva, Dr Lalit Mehndru, Dr Mabel Morales Camacho, Dr Miriam Arago Galindo, Dr Narayan Jana, Dr Rohit Sarin, Dr Sandeep Juneja, Dr Sangeeta Sharma, Dr Sarabjit Singh Chadha, Dr Shanta Achanta, Dr Shazia Anjum, Dr Shibu Balakrishnan, Dr Shivani Chandra, Dr Sunil Khaparde, Mr Vigneshwaran Somasundaram and Dr Vijay Chavan. We are thankful to Dr Padmapriyadarsini C, Former Director, ICMR - National Institute for Research in Tuberculosis , Chennai and coordinating principal investigator of mBPaL trial, Dr D. Bella Devaleenal, Dr Balaji Ramraj, study investigators and Dr. Narendran Gopalan from ICMR-NIRT for sharing the interim results of the finalize the guidelines. Special thanks to the communications team at WHO India for their crucial support in editing, formatting, and designing this document. During the development process of the guidelines, the recommendations & inputs from with the WHO Consolidated Guidelines on Tuberculosis: diagnosis and treatment drug-resistant TB Module 3 (2021), Module 4 (2022) and WHO operational handbook on Tuberculosis: Treatment of drug-resistant TB (2022), were duly considered. The technical and operational aspects detailed herein are intended to complement the existing NTEP technical and operational guidelines - 2016, Guidelines for Programmatic Management of Drug-Resistant TB in India - 2021 and the National Strategic Plan for Tuberculosis (2017\u201325): Elimination by 2025 in India. The guidelines are to be implemented across India to safely enhance treatment success, reduce mortality in TB patients and will be considered for refinement as new national and global evidence",
+        "cross_encoder_score": 5.630678176879883
+      },
+      {
+        "year": "2021",
+        "source": "data 2021.pdf",
+        "page": "39",
+        "chunk_indices": [
+          "0"
+        ],
+        "method": "PDF text",
+        "text": "GUIDELINES FOR PROGRAMMATIC MANAGEMENT OF DRUG RESISTANT TB IN INDIA 2021 xxxix Pre-extensively drug resistant TB (Pre-XDR-TB). TB caused by Mycobacterium tuberculosis strains that fulfil the definition of MDR/RR-TB and are also resistant to any fluoroquinolone.(1) Poly-drug resistant TB (PDR-TB). A TB patient, whose biological specimen is resistant to more than one first-line anti-TB drug, other than both H and R. Programmatic management of TB preventive treatment. PMTPT includes all coordinated activities by public and private health caregivers and the community aimed at scaling-up TB preventive treatment to people who need it. Rifampicin resistant TB (RR-TB). A TB patient, whose biological specimen is resistant to R, detected using phenotypic or genotypic methods, with or without resistance to other anti-TB drugs. It includes any resistance to R, in the form of mono-resistance, poly-resistance, MDR or XDR. Serious adverse events. SAEs are those adverse events (AEs)",
+        "cross_encoder_score": 4.947937965393066
+      },
+      {
+        "year": "2017",
+        "source": "Guideline for PMDT in India 2017 with messages.pdf",
+        "page": "116",
+        "chunk_indices": [
+          "0"
+        ],
+        "method": "PDF text",
+        "text": "94 9.2 DR-TB in children Principles of treatment of drug-resistant TB in children[30][12] - always be treated in consultation with an expert; - include at least 4-6 bactericidal medications to which the strain is known or likely to be susceptible; - do not add a single drug to a failing regimen; - ensure treatment is given for at least 12 months after M. tuberculosis cultures have converted to negative; and - extend treatment to 24 months in case of HIV infection or cavitatory lesions. Building a treatment regimen The principles of designing a WHO recommended regimen detailed in the previous chapter also applies to children. However, newer drugs like Bdq are not yet recommended in children as the evidence is yet to evolve. However, they can be offered the shorter MDR-TB regimen. Thus, children would be managed with regimen designs without newer drugs as in Table 7.3 and 7.4, depending on the DST pattern and other parameters for mixed pattern DR-TB. WHO recommends",
+        "cross_encoder_score": 4.407722473144531
+      }
+    ],
+    "generation_mode": "ollama_quote_anchored_citations",
+    "generation_success": true,
+    "citation_validation": "exact_quote_traceability",
+    "semantic_support_verified": true,
+    "citation_audit": {
+      "status": "quote_traceability_passed",
+      "semantic_entailment_verified": true,
+      "semantic_support_average": 1.0,
+      "validated_claims": 3,
+      "claim_evaluations": [
+        {
+          "score": 1.0,
+          "classification": "HIGH_SUPPORT",
+          "supported_terms": [],
+          "unsupported_terms": [],
+          "term_coverage_pct": 100.0
+        },
+        {
+          "score": 1.0,
+          "classification": "HIGH_SUPPORT",
+          "supported_terms": [],
+          "unsupported_terms": [],
+          "term_coverage_pct": 100.0
+        },
+        {
+          "score": 1.0,
+          "classification": "HIGH_SUPPORT",
+          "supported_terms": [],
+          "unsupported_terms": [],
+          "term_coverage_pct": 100.0
+        }
+      ],
+      "validation_detail": "Directly grounded and quote-verified 3 findings from indexed guideline evidence."
+    }
+  },
+  "how should patients receiving drug-resistant tb treatment be monitored?": {
+    "question": "How should patients receiving drug-resistant TB treatment be monitored?",
+    "answer": "**Evidence-supported claims**\n- irrespective of CD4 cell counts, patients co-infected with HIV and TB should be started on ART as soon as possible after initiating TB treatment. [2]\n- Indicator Numerator Denominator Diagnosis 1 Coverage of DST to H and FQ among bacteriologically confirmed TB patients with Rif resistance not detected Number or proportion of bacteriologically confirmed TB patients with Rif resistance not detected and valid results available for H and FQ resistance Number of bacteriologically confirmed TB patients with Rif resistance not detected, and valid results available for H and FQ resistance Total number of bacteriologically confirmed TB patients with Rif resistance not detected Process indicators 2 Sustained treatment success at six and 12 months, 18 months and 24 months post- treatment Number or proportion of successfully treated TB patients who are alive and free of TB Disaggregate by after six months of treatment completion or after 12 months of treatment [1]\n- GUIDELINES FOR PROGRAMMATIC MANAGEMENT OF DRUG RESISTANT TB IN INDIA 2021 57 - As in any other PLHIV, those receiving the shorter oral Bedaquiline-containing regimen should also receive prophylactic medication for opportunistic infections (OI), support for TB and ARV medication adherence and close monitoring of biomarkers of immune status. [2]\n- The ART should be initiated as soon as possible in all HIV/TB co-infected patients with active TB. [2]\n- Generally, this should be within the first two weeks of initiating DR-TB treatment. [2]\n\n**Evidence limitation:** Verbatim findings extracted directly from retrieved guideline passages.\n\n**Citation note:** Each numbered reference identifies the guideline page containing the exact supporting quotation. Exact quotation matching establishes traceability, not automatic semantic entailment.",
+    "evidence": [
+      {
+        "year": "2025",
+        "source": "data 2025.pdf",
+        "page": "64",
+        "chunk_indices": [
+          "0"
+        ],
+        "method": "PDF text",
+        "text": "62 National Guidelines for Management of Drug Resistant TB 6.2 Programme monitoring The following two indicators will be used for monitoring purposes (3): No. Indicator Numerator Denominator Diagnosis 1 Coverage of DST to H and FQ among bacteriologically confirmed TB patients with Rif resistance not detected Number or proportion of bacteriologically confirmed TB patients with Rif resistance not detected and valid results available for H and FQ resistance Number of bacteriologically confirmed TB patients with Rif resistance not detected, and valid results available for H and FQ resistance Total number of bacteriologically confirmed TB patients with Rif resistance not detected Process indicators 2 Sustained treatment success at six and 12 months, 18 months and 24 months post- treatment Number or proportion of successfully treated TB patients who are alive and free of TB Disaggregate by after six months of treatment completion or after 12 months of treatment",
+        "cross_encoder_score": 6.306147575378418
+      },
+      {
+        "year": "2021",
+        "source": "data 2021.pdf",
+        "page": "97",
+        "chunk_indices": [
+          "0"
+        ],
+        "method": "PDF text",
+        "text": "GUIDELINES FOR PROGRAMMATIC MANAGEMENT OF DRUG RESISTANT TB IN INDIA 2021 57 - As in any other PLHIV, those receiving the shorter oral Bedaquiline-containing regimen should also receive prophylactic medication for opportunistic infections (OI), support for TB and ARV medication adherence and close monitoring of biomarkers of immune status. - Co-trimoxazole can be provided to all patients with HIV as per WHO recommendation. - Based on NACO Guidelines on ART for HIV infection in adults and adolescents; irrespective of CD4 cell counts, patients co-infected with HIV and TB should be started on ART as soon as possible after initiating TB treatment. The ART should be initiated as soon as possible in all HIV/TB co-infected patients with active TB. Second-line anti-TB drugs should be initiated first, followed by ART as soon as second-line anti-TB drugs are tolerated. Generally, this should be within the first two weeks of initiating DR-TB treatment. On the other hand, undue delay in",
+        "cross_encoder_score": 5.817485809326172
+      },
+      {
+        "year": "2021",
+        "source": "data 2021.pdf",
+        "page": "118",
+        "chunk_indices": [
+          "0"
+        ],
+        "method": "PDF text",
+        "text": "GUIDELINES FOR PROGRAMMATIC MANAGEMENT OF DRUG RESISTANT TB IN INDIA 2021 78 4.9.2. Pre-treatment evaluation Pre-treatment evaluation for any TB patient must include a thorough clinical evaluation by a doctor with - History and physical examination - Height/weight - Random blood sugar (RBS) - Chest X-ray - HIV test. No additional investigations are required for H mono/poly DR-TB patients unless clinically indicated. The pre-treatment evaluation carried out at the time of treatment initiation can be considered valid for 1 month from the date of the test result and the patient can be re- initiated on a subsequent regimen considering the previously conducted pre-treatment tests. Active drug safety management and monitoring (aDSM) treatment initiation form needs to be completed for all DR-TB patients at the time of initiation of each new episode of treatment. 4.9.3. Treatment TB patients with rifampicin resistance not detected will be initiated on first-line DS-TB treatment regimen",
+        "cross_encoder_score": 5.80643367767334
+      },
+      {
+        "year": "2021",
+        "source": "data 2021.pdf",
+        "page": "84",
+        "chunk_indices": [
+          "0",
+          "1"
+        ],
+        "method": "PDF text",
+        "text": "GUIDELINES FOR PROGRAMMATIC MANAGEMENT OF DRUG RESISTANT TB IN INDIA 2021 44 elaborates the processes for the prompt initiation of treatment in DR-TB patients. Patients with H mono/poly DR-TB may be initiated on treatment at any of the health facilities (HF) after the pre-treatment evaluation. Patients with MDR/RR-TB or XDR-TB need to be referred for necessary pre-treatment evaluations, basis which their treatment is initiated at the N/DDR- TBC. Counselling of the patient and his/her family is done at home or over phone by the health workers and doctor at the health facility. An appropriate treatment supporter needs to be identified in consultation with the patient and trained to monitor treatment adherence, maintain records, identify and report minor side effects of DR-TB patients. In case of severe ADRs, the patients will be referred to N/DDR-TBC. The contacts of the MDR/RR-TB patient with FQ susceptible, upon ruling out active TB are initiated on preventive treatment as per the guidelines. HFs are responsible to update the information of DR-TB patients in Nikshay on real-time basis. All the process as mentioned in the care cascade needs to be monitored by the TB unit (MO-TU) and senior DR-TB TB-HIV supervisor. 4.4. Health education & counselling to patients and their family/caregiver Health education and counselling to the DR-TB patients and their family members about the disease, the mechanism of transmission and necessity of taking regular and adequate treatment, is of utmost importance. Effective counselling for all patients and their family members from the time of treatment initiation with DS-TB is found to be effective in preventing the development of drug resistance. In all circumstances, counselling should start at the initial point of contact as soon as the diagnosis is established and",
+        "cross_encoder_score": 5.744121551513672
+      }
+    ],
+    "generation_mode": "ollama_quote_anchored_citations",
+    "generation_success": true,
+    "citation_validation": "exact_quote_traceability",
+    "semantic_support_verified": true,
+    "citation_audit": {
+      "status": "quote_traceability_passed",
+      "semantic_entailment_verified": true,
+      "semantic_support_average": 1.0,
+      "validated_claims": 5,
+      "claim_evaluations": [
+        {
+          "score": 1.0,
+          "classification": "HIGH_SUPPORT",
+          "supported_terms": [],
+          "unsupported_terms": [],
+          "term_coverage_pct": 100.0
+        },
+        {
+          "score": 1.0,
+          "classification": "HIGH_SUPPORT",
+          "supported_terms": [],
+          "unsupported_terms": [],
+          "term_coverage_pct": 100.0
+        },
+        {
+          "score": 1.0,
+          "classification": "HIGH_SUPPORT",
+          "supported_terms": [],
+          "unsupported_terms": [],
+          "term_coverage_pct": 100.0
+        },
+        {
+          "score": 1.0,
+          "classification": "HIGH_SUPPORT",
+          "supported_terms": [],
+          "unsupported_terms": [],
+          "term_coverage_pct": 100.0
+        },
+        {
+          "score": 1.0,
+          "classification": "HIGH_SUPPORT",
+          "supported_terms": [],
+          "unsupported_terms": [],
+          "term_coverage_pct": 100.0
+        }
+      ],
+      "validation_detail": "Directly grounded and quote-verified 5 findings from indexed guideline evidence."
+    }
+  },
+  "what are the eligibility criteria for bpalm treatment?": {
+    "question": "What are the eligibility criteria for BPaLM treatment?",
+    "answer": "**Evidence-supported claims**\n- 3.3.1 Eligibility criteria The eligibility criteria for BPaLM regimen includes. [1]\n- onsiderations/ extension criteria/ regimen modification 3.3.7 Follow-up monitoring 3.3.8 Management of patients found to be ineligible for BPaLM regimen 3.4 9\u201311-month shorter oral MDR/RR-TB regimen 3.4.1 Eligibility criteria 3.4.2 Regimen, dosage, and administration 3.4.3 Baseline and follow-up monitoring 3.4.4 Regimen modification 3.5 18-20 months longer oral M/XDR-TB regimen 3.6 Isoniazid (H) mono/poly drug-resistant TB regimen 3.7 Switching between treatment regimens 3.8 Supply chain management of anti-TB drugs and logistics 3.8.1 Drug procurement 3.8.2 Supply chain management 3.8.2.1 BPaLM regimen 3.8.2.2 9 -11 month shorter oral MDR/RR-TB regimen 3.8.2.3 Longer oral M/XDR-TB regimen 3-7 13 15 17 19 19 20 20 21 25 25 27 28 28 29 29 31 32 32 32 33 36 38 38 38 39 40 40 40 42 42 45 45 45 45 47 47 [2]\n- Eligibility criteria for BPaLM has been mentioned in the respective section of Chapter-3. [3]\n- In addition to the eligibility criteria for BPaLM, the relative contraindications, requiring careful selection of patients after a detailed history of the patient (drug, comorbidity, concurrent use of any drugs, etc.), physical assessment in combination with PTE test, are detailed in Table 3.2. [4]\n- Implementation considerations/ Extension criteria for BPaLM (Details have been mentioned in section BPaLM respective section of Chapter-3). [3]\n\n**Evidence limitation:** Verbatim findings extracted directly from retrieved guideline passages.\n\n**Citation note:** Each numbered reference identifies the guideline page containing the exact supporting quotation. Exact quotation matching establishes traceability, not automatic semantic entailment.",
+    "evidence": [
+      {
+        "year": "2025",
+        "source": "data 2025.pdf",
+        "page": "31",
+        "chunk_indices": [
+          "1",
+          "2"
+        ],
+        "method": "PDF text",
+        "text": "in females in baseline ECG, after correcting the electrolytes, QTcF in repeat ECG is \u2264450 ms in males and \u2264470 ms in females iv. Non-lactating women, lactating women but not breast-feeding, non-pregnant women, pregnant women with <20 or <24 weeks gestation and who is willing for medical termination of pregnancy (as per latest MTP gazette notification, as applicable) risk of Bdq resistance amplification. Hence, it is strongly recommended that all treatment regimens, including BPaLM doses are to be administered under direct observation (minimum 6 days per week) by a trained treatment supporter (health care provider, community volunteer) identified by the community health officer (CHO) of the respective Ayushman Arogya Mandir (AAM, erstwhile health & wellness centre, HWC). The treatment supervision may be supplemented by suitable digital adherence monitoring technology (3). It will be preferable for the treatment supporters to accompany the patient/ contacts for the screening and follow-up visits and liaise with the clinical staff. - - It is recommended to avoid taking magnesium supplements or magnesium-containing antacids for two hours before and two hours after taking any regimen as it can bind the FQs and make them ineffective (23). 3.3 BPaLM regimen BPaLM regimen must be the first choice of treatment in eligible patients \u226514 years age with MDR/RR- TB regardless of their FQ resistance status or HIV status. 3.3.1 Eligibility criteria The eligibility criteria for BPaLM regimen includes. Inclusion Criteria",
+        "cross_encoder_score": 6.825972557067871
+      },
+      {
+        "year": "2025",
+        "source": "data 2025.pdf",
+        "page": "11",
+        "chunk_indices": [
+          "1"
+        ],
+        "method": "PDF text",
+        "text": "onsiderations/ extension criteria/ regimen modification 3.3.7 Follow-up monitoring 3.3.8 Management of patients found to be ineligible for BPaLM regimen 3.4 9\u201311-month shorter oral MDR/RR-TB regimen 3.4.1 Eligibility criteria 3.4.2 Regimen, dosage, and administration 3.4.3 Baseline and follow-up monitoring 3.4.4 Regimen modification 3.5 18-20 months longer oral M/XDR-TB regimen 3.6 Isoniazid (H) mono/poly drug-resistant TB regimen 3.7 Switching between treatment regimens 3.8 Supply chain management of anti-TB drugs and logistics 3.8.1 Drug procurement 3.8.2 Supply chain management 3.8.2.1 BPaLM regimen 3.8.2.2 9 -11 month shorter oral MDR/RR-TB regimen 3.8.2.3 Longer oral M/XDR-TB regimen 3-7 13 15 17 19 19 20 20 21 25 25 27 28 28 29 29 31 32 32 32 33 36 38 38 38 39 40 40 40 42 42 45 45 45 45 47 47",
+        "cross_encoder_score": 5.603350639343262
+      },
+      {
+        "year": "2025",
+        "source": "data 2025.pdf",
+        "page": "25",
+        "chunk_indices": [
+          "2"
+        ],
+        "method": "PDF text",
+        "text": "utation is associated with Eto resistance and KatG mutation is associated with Hh resistance. If FL-LPA is done on culture isolates for patients with smear negative specimen, till the time the result of indirect FL-LPA is available, use other exclusion criteria to decide regimen. Results of Mfx, Am and Eto will be interpreted as per the mutation pattern of rapid molecular test/ LPA. 4. Eligibility criteria for BPaLM has been mentioned in the respective section of Chapter-3. 5. Implementation considerations/ Extension criteria for BPaLM (Details have been mentioned in section BPaLM respective section of Chapter-3). 6. Eligibility criteria for 9-11 month shorter oral MDR/RR-TB regimen have been mentioned in the respective section of Chapter-3) 7. At follow-up, offer LC-DST for Bdq*, Lzd, Pa*, Dlm*, Z, Mfx 1.0 (*whenever available). - - All states must ensure the availability of all NTEP-endorsed diagnostic technologies or appropriate linkages with public or private laboratories to",
+        "cross_encoder_score": 4.999831676483154
+      },
+      {
+        "year": "2025",
+        "source": "data 2025.pdf",
+        "page": "32",
+        "chunk_indices": [
+          "0"
+        ],
+        "method": "PDF text",
+        "text": "30 National Guidelines for Management of Drug Resistant TB Note: - - In case of extensive pulmonary TB, BPaLM regimen may be given, if eligible. - - If at baseline, the results of the serum chemistry panel, hematology or urinalysis are outside the normal reference range (including above listed parameters), the patient may still be considered if the physician judges that the abnormalities or deviations from normal to be not clinically significant or to be appropriate and reasonable. Hypokalemia, hypomagnesemia and hypocalcemia should be corrected prior to a patient receiving any QTc prolonging drugs. In addition to the eligibility criteria for BPaLM, the relative contraindications, requiring careful selection of patients after a detailed history of the patient (drug, comorbidity, concurrent use of any drugs, etc.), physical assessment in combination with PTE test, are detailed in Table 3.2. i. Person with age below 14 years ii. Person with documented resistance to Bdq, Lzd and/",
+        "cross_encoder_score": 4.755947113037109
+      }
+    ],
+    "generation_mode": "ollama_quote_anchored_citations",
+    "generation_success": true,
+    "citation_validation": "exact_quote_traceability",
+    "semantic_support_verified": true,
+    "citation_audit": {
+      "status": "quote_traceability_passed",
+      "semantic_entailment_verified": true,
+      "semantic_support_average": 1.0,
+      "validated_claims": 5,
+      "claim_evaluations": [
+        {
+          "score": 1.0,
+          "classification": "HIGH_SUPPORT",
+          "supported_terms": [],
+          "unsupported_terms": [],
+          "term_coverage_pct": 100.0
+        },
+        {
+          "score": 1.0,
+          "classification": "HIGH_SUPPORT",
+          "supported_terms": [],
+          "unsupported_terms": [],
+          "term_coverage_pct": 100.0
+        },
+        {
+          "score": 1.0,
+          "classification": "HIGH_SUPPORT",
+          "supported_terms": [],
+          "unsupported_terms": [],
+          "term_coverage_pct": 100.0
+        },
+        {
+          "score": 1.0,
+          "classification": "HIGH_SUPPORT",
+          "supported_terms": [],
+          "unsupported_terms": [],
+          "term_coverage_pct": 100.0
+        },
+        {
+          "score": 1.0,
+          "classification": "HIGH_SUPPORT",
+          "supported_terms": [],
+          "unsupported_terms": [],
+          "term_coverage_pct": 100.0
+        }
+      ],
+      "validation_detail": "Directly grounded and quote-verified 5 findings from indexed guideline evidence."
+    }
+  },
+  "how should adverse drug reactions during tb treatment be managed?": {
+    "question": "How should adverse drug reactions during TB treatment be managed?",
+    "answer": "**Evidence-supported claims**\n- 11.5 Treatment supervision In view of the potential adverse reactions of second-line drugs, the MO-PHI should arrange for provision of daily treatment supervision by a trained treatment supporter. [2]\n- Ancillary drugs for the management of adverse reactions should be made available to the patient free of cost. [1]\n- Patients should be provided with a list of adverse drug reactions along with necessary actions to be taken. [2]\n- Prevention and management of adverse drugreactions Most TBpatients onfirst line drugscomplete their treatment without anysignificant adverse drug effects.However,afewpatientsdoexperience adverseeffectsandsomeofthedruginducedside effects can be prevented. [3]\n- Before starting treatment, the patient should be instructed in detail about potential adverse effects that could be produced by the prescribed drug regimen and when they occur, to notify a health-care provider. [4]\n\n**Evidence limitation:** Verbatim findings extracted directly from retrieved guideline passages.\n\n**Citation note:** Each numbered reference identifies the guideline page containing the exact supporting quotation. Exact quotation matching establishes traceability, not automatic semantic entailment.",
+    "evidence": [
+      {
+        "year": "2017",
+        "source": "Guideline for PMDT in India 2017 with messages.pdf",
+        "page": "150",
+        "chunk_indices": [
+          "0"
+        ],
+        "method": "PDF text",
+        "text": "128 10.3 Role of DR-TB centre committee in management of adverse reactions Whenever a patient has serious adverse reactions to any of the second-line anti-TB drugs, ideally, s/he is admitted at the DR-TBC and the committee decides on further management of the patient. This may require withholding or discontinuing the offending drug in the treatment regimen. The committee will be responsible for arranging the drugs to be given for managing these reactions. Timely and intensive monitoring for identifying and managing adverse reactions are essential components of the PMDT services. This will help improve the patient\u2019s adherence to treatment, reduce mortality, ensure timely management of ADR and obtain better treatment outcomes. Ancillary drugs for the management of adverse reactions should be made available to the patient free of cost. Proper training of staff and support to the patient are other important activities that are required. 10.4 Pharmacovigilance in TB programme",
+        "cross_encoder_score": 7.384466171264648
+      },
+      {
+        "year": "2017",
+        "source": "Guideline for PMDT in India 2017 with messages.pdf",
+        "page": "157",
+        "chunk_indices": [
+          "1",
+          "2"
+        ],
+        "method": "PDF text",
+        "text": "HI through a filled PMDT- referral for treatment form. The patient will carry his/her copy of the Treatment book. The DR-TB counsellor should counsel the patient on the various drugs that have been initiated and their adverse effects. Patients should be provided with a list of adverse drug reactions along with necessary actions to be taken. The Counsellor should train the patient about the possible adverse event. The DR-TB counsellor should also intimate the referral and relevant details of treatment in advance to the MO-PHI or treating clinician to arrange for drugs and necessary support. All patients may not need inpatient care. However, patients such as those who are seriously ill, those to be initiated on newer drug regimens, patients who need management of drug reactions and patients from distant geographical locations, will preferably be managed as inpatients. Facilities such as diet and stay for patient and one attendant, ancillary drugs and any other related procedures should be provided free of cost. 11.5 Treatment supervision In view of the potential adverse reactions of second-line drugs, the MO-PHI should arrange for provision of daily treatment supervision by a trained treatment supporter. Treatment supervision may be provided based on the collective decision of the patient and the MO-PHI through any of the various options available, such as health care worker, community volunteer, private provider, family observation of treatment Electronic Pill Box (Annexure 14), ICT support etc., 11.6 Follow-up of treatment The DR-TB Counsellors, DR-TB-HIV Coordinators, DR-TBC SA should track pending follow-up cultures and consultations and the information update at various centres. They should coordinate among themselves to ensure that their records are currently valid. Timely alerts",
+        "cross_encoder_score": 6.8012518882751465
+      },
+      {
+        "year": "2016",
+        "source": "TOG.pdf",
+        "page": "59",
+        "chunk_indices": [
+          "0"
+        ],
+        "method": "OCR",
+        "text": "Prevention and management of adverse drugreactions Most TBpatients onfirst line drugscomplete their treatment without anysignificant adverse drug effects.However,afewpatientsdoexperience adverseeffectsandsomeofthedruginducedside effects can be prevented. Moreover, many second line drugs are associated with more side effects during long duration of treatment. It is therefore important that patients be clinically monitored during treatment so that adverse effects can be detected promptly and managed properly. All Health personnel should monitor patients about adverse drug effects and inform patients to report to health system in case of any of the side effects. Health-care workers need to be informed and trained about the methodology and channels forreportingADRs. AdverseeffectsofAntiTBdrugs Anti-TB treatment with first-line drugs is generally safe and well tolerated. Side effects to anti-TB drugs are common.Trivialsideeffectsmaylead toreducedcompliancewithtreatment.These adverse",
+        "cross_encoder_score": 6.755327224731445
+      },
+      {
+        "year": "2021",
+        "source": "data 2021.pdf",
+        "page": "123",
+        "chunk_indices": [
+          "0",
+          "2"
+        ],
+        "method": "PDF text",
+        "text": "GUIDELINES FOR PROGRAMMATIC MANAGEMENT OF DRUG RESISTANT TB IN INDIA 2021 83 Table 4.18: Possible adverse events due to drugs in H mono/poly DR-TB regimen and the replacement drugs Adverse Drug Events Drugs Hepatitis R, Z QT prolongation FQ, Cfz Rash, allergic reaction and anaphylaxis Any drug Gastrointestinal symptoms Z, E, Cfz, FQs Giddiness FQ, Z Arthralgia Z, FQ Peripheral neuropathy FQ, E Depression FQ Psychotic symptoms FQ Seizures FQ Tendonitis and tendon rupture FQ Vestibular toxicity (tinnitus and dizziness) FQs Optic neuritis E, Lzd, Cfz Metallic Taste FQ Superficial fungal infection and thrush FQ 4.10. Management of adverse drug reactions Training of all the health staff will be done to identify and manage ADRs. Close monitoring of patients is necessary to ensure that adverse effects of drugs are recognized quickly by health-care personnel. The ability to monitor patients daily for adverse effects is one of the major advantages of having a treatment supporter as If required, hospitalization can be done at the DDR-TBC where inpatient facility is available or referred to a NDR-TBC for admission. A symptom-based approach should be followed to manage minor ADR where the patient is usually able to tolerate ATT drugs and continue medication with symptomatic treatment. Patients with major adverse effects should be managed at the hospital level (they may require admission). The N/DDR-TBC Committee would be consulted to take decisions regarding reduction/ termination of any drug. If any drug is withheld/ terminated due to ADR, it would be replaced with an appropriate substitute drug as per the DR-TBC committee. Before starting treatment, the patient should be instructed in detail about potential adverse effects that could be produced by the prescribed drug regimen and when they occur, to notify a health-care provider. Proper management of adverse effects begins with pretreatment on patient education. Depending on the severity of ADRs,",
+        "cross_encoder_score": 6.643632411956787
+      }
+    ],
+    "generation_mode": "ollama_quote_anchored_citations",
+    "generation_success": true,
+    "citation_validation": "exact_quote_traceability",
+    "semantic_support_verified": true,
+    "citation_audit": {
+      "status": "quote_traceability_passed",
+      "semantic_entailment_verified": true,
+      "semantic_support_average": 1.0,
+      "validated_claims": 5,
+      "claim_evaluations": [
+        {
+          "score": 1.0,
+          "classification": "HIGH_SUPPORT",
+          "supported_terms": [],
+          "unsupported_terms": [],
+          "term_coverage_pct": 100.0
+        },
+        {
+          "score": 1.0,
+          "classification": "HIGH_SUPPORT",
+          "supported_terms": [],
+          "unsupported_terms": [],
+          "term_coverage_pct": 100.0
+        },
+        {
+          "score": 1.0,
+          "classification": "HIGH_SUPPORT",
+          "supported_terms": [],
+          "unsupported_terms": [],
+          "term_coverage_pct": 100.0
+        },
+        {
+          "score": 1.0,
+          "classification": "HIGH_SUPPORT",
+          "supported_terms": [],
+          "unsupported_terms": [],
+          "term_coverage_pct": 100.0
+        },
+        {
+          "score": 1.0,
+          "classification": "HIGH_SUPPORT",
+          "supported_terms": [],
+          "unsupported_terms": [],
+          "term_coverage_pct": 100.0
+        }
+      ],
+      "validation_detail": "Directly grounded and quote-verified 5 findings from indexed guideline evidence."
+    }
+  }
+}
