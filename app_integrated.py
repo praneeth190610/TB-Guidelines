@@ -140,18 +140,14 @@ h1, h2, h3, h4 {
     letter-spacing: -0.5px;
 }
 
-/* Force dark readable text across all main markdown containers, lists, and elements */
-[data-testid="stAppViewContainer"] .main,
+/* Force dark readable text across main markdown containers and content */
 [data-testid="stAppViewContainer"] .main p,
-[data-testid="stAppViewContainer"] .main span,
 [data-testid="stAppViewContainer"] .main li,
 [data-testid="stAppViewContainer"] .main ul,
 [data-testid="stAppViewContainer"] .main ol,
-[data-testid="stAppViewContainer"] .main div,
 [data-testid="stAppViewContainer"] .main strong,
 [data-testid="stAppViewContainer"] .main em,
 [data-testid="stMarkdownContainer"] p,
-[data-testid="stMarkdownContainer"] span,
 [data-testid="stMarkdownContainer"] li,
 [data-testid="stMarkdownContainer"] ul,
 [data-testid="stMarkdownContainer"] ol,
@@ -411,7 +407,10 @@ section[data-testid="stSidebar"] [data-testid="stRadio"] label:hover {
 /* Buttons */
 
 .stButton > button,
-.stFormSubmitButton > button {
+.stFormSubmitButton > button,
+[data-testid="stFormSubmitButton"] > button,
+[data-testid="stBaseButton-secondary"],
+[data-testid="stBaseButton-primary"] {
     background: var(--navy) !important;
     color: #FFFFFF !important;
     border: 1px solid var(--navy) !important;
@@ -421,17 +420,48 @@ section[data-testid="stSidebar"] [data-testid="stRadio"] label:hover {
     transition: all 0.2s ease;
 }
 
-.stButton > button p,
-.stFormSubmitButton > button p {
+.stButton > button *,
+.stFormSubmitButton > button *,
+[data-testid="stFormSubmitButton"] > button *,
+[data-testid="stBaseButton-secondary"] *,
+[data-testid="stBaseButton-primary"] * {
     color: #FFFFFF !important;
+    fill: #FFFFFF !important;
 }
 
 .stButton > button:hover,
-.stFormSubmitButton > button:hover {
+.stFormSubmitButton > button:hover,
+[data-testid="stFormSubmitButton"] > button:hover {
     background: var(--teal) !important;
     border-color: var(--teal) !important;
     transform: translateY(-2px);
     box-shadow: 0 6px 15px rgba(40,124,120,0.18);
+}
+
+/* High-Contrast Spinners & Status Messages (eliminates dark text on dark box) */
+[data-testid="stSpinner"],
+.stSpinner {
+    background: #E8F4F2 !important;
+    border: 1px solid #B0D7D0 !important;
+    border-radius: 10px !important;
+    padding: 14px 20px !important;
+    box-shadow: 0 4px 14px rgba(20,43,59,0.08) !important;
+    margin: 14px 0 !important;
+}
+
+[data-testid="stSpinner"] *,
+.stSpinner * {
+    color: #142B3B !important;
+    font-weight: 600 !important;
+    font-size: 14px !important;
+}
+
+[data-testid="stSpinner"] svg,
+.stSpinner svg,
+[data-testid="stSpinner"] i {
+    stroke: #287C78 !important;
+    fill: #287C78 !important;
+    color: #287C78 !important;
 }
 
 /* Premium Expander Styling */
