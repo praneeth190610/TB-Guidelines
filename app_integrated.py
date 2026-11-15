@@ -1019,19 +1019,18 @@ with st.sidebar:
     if "nav_page" not in st.session_state or st.session_state["nav_page"] not in pages:
         st.session_state["nav_page"] = "Dashboard"
 
-    current_index = pages.index(st.session_state["nav_page"])
-
-    def on_nav_change():
-        st.session_state["nav_page"] = st.session_state["sidebar_nav"]
-
-    page = st.radio(
+    page_selected = st.radio(
         "WORKSPACE",
         pages,
-        index=current_index,
-        key="sidebar_nav",
-        on_change=on_nav_change,
+        index=pages.index(st.session_state["nav_page"]),
         label_visibility="visible"
     )
+
+    if page_selected != st.session_state["nav_page"]:
+        st.session_state["nav_page"] = page_selected
+        st.rerun()
+
+    page = st.session_state["nav_page"]
 
     st.divider()
 
