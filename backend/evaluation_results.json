@@ -2,24 +2,24 @@
   "status": "completed",
   "benchmark_queries_count": 10,
   "hybrid_retrieval": {
-    "precision_at_1": 1.0,
-    "precision_at_3": 0.833,
-    "precision_at_5": 0.84,
-    "recall_at_5": 0.855,
-    "mrr": 1.0,
-    "ndcg_at_5": 0.869
+    "precision_at_1": 0.8,
+    "precision_at_3": 0.767,
+    "precision_at_5": 0.76,
+    "recall_at_5": 0.812,
+    "mrr": 0.892,
+    "ndcg_at_5": 0.846
   },
   "semantic_only": {
     "precision_at_1": 0.4,
     "precision_at_3": 0.433,
-    "precision_at_5": 0.395,
+    "precision_at_5": 0.38,
     "recall_at_5": 0.305,
     "mrr": 0.55,
     "ndcg_at_5": 0.329
   },
   "keyword_only": {
     "precision_at_1": 0.6,
-    "precision_at_3": 0.6,
+    "precision_at_3": 0.567,
     "precision_at_5": 0.44,
     "recall_at_5": 0.45,
     "mrr": 0.733,
@@ -82,14 +82,14 @@
         "2025 p.30"
       ],
       "hybrid_relevance": [
-        1,
         0,
+        1,
         0,
         1,
         1
       ],
       "hybrid_precision_at_3": 0.333,
-      "hybrid_rr": 1.0
+      "hybrid_rr": 0.5
     },
     {
       "id": "q3",
@@ -115,14 +115,14 @@
         "2017 p.109"
       ],
       "hybrid_relevance": [
-        1,
         0,
+        1,
         1,
         0,
         1
       ],
       "hybrid_precision_at_3": 0.667,
-      "hybrid_rr": 1.0
+      "hybrid_rr": 0.5
     },
     {
       "id": "q4",

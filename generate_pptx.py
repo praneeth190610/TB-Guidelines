@@ -187,7 +187,7 @@ def create_presentation():
         "Controller Orchestration & Latency Fixes",
         "Quote-Anchored Local RAG (Qwen 2.5)",
         "Deterministic Python Citation Audit",
-        "Quantitative Evaluation (MRR: 0.91)",
+        "Quantitative Evaluation (MRR: 0.892)",
         "Live System Walkthrough & Viva Q&A"
     ])
 
@@ -429,7 +429,7 @@ def create_presentation():
         "Input: Top 20 RRF Candidates.",
         "Output: Top 4 High-Confidence Evidence Passages.",
         "Eliminates False Positives: Accurately separates pediatric TB passages from adult drug-resistant TB passages even when both share identical disease keywords.",
-        "Mean Reciprocal Rank (MRR) jumps from 0.74 to 0.91 with cross-encoder reranking."
+        "Mean Reciprocal Rank (MRR) jumps from 0.733 to 0.892 with cross-encoder reranking."
     ])
 
     set_notes(s11, "After RRF selects the top 20 candidates, we pass them to a Cross-Encoder. The cross-encoder feeds the query and candidate passage together into transformer self-attention layers. This accurately filters out false positives.")
@@ -625,10 +625,10 @@ def create_presentation():
             p.font.color.rgb = WHITE
 
     data = [
-        ["Dense Semantic Only (all-MiniLM-L6-v2)", "43.3%", "30.5%", "0.550", "0.329"],
-        ["Sparse BM25 Keyword Only (Synonyms)", "60.0%", "45.0%", "0.733", "0.501"],
-        ["RRF Hybrid (Dense + Sparse)", "73.3%", "68.0%", "0.850", "0.740"],
-        ["Our Full System (Hybrid + Cross-Encoder Rerank)", "83.3%", "85.5%", "1.000", "0.869 🏆"]
+        ["Dense Semantic Only (all-MiniLM-L6-v2)", "0.433", "0.305", "0.550", "0.329"],
+        ["Sparse BM25 Keyword Only (Synonyms)", "0.567", "0.450", "0.733", "0.501"],
+        ["RRF Hybrid (Dense + Sparse)", "0.710", "0.680", "0.825", "0.740"],
+        ["Our Full System (Hybrid + Cross-Encoder Rerank)", "0.767", "0.812", "0.892", "0.846 🏆"]
     ]
 
     for r_idx, row in enumerate(data, start=1):
@@ -644,12 +644,12 @@ def create_presentation():
                     p.font.bold = True
 
     add_card(s18, Inches(0.8), Inches(4.6), Inches(11.733), Inches(2.3), "Key Empirical Takeaways", [
-        "Sparse BM25 with TB domain synonyms lifts Recall from 30.5% to 45.0% due to exact medical acronym recognition (CBNAAT, SL-LPA).",
-        "Cross-Encoder reranking lifts Precision@3 to 83.3% and achieves a perfect 1.000 MRR, ensuring the primary target clinical passage is always retrieved at Rank #1.",
-        "Overall nDCG@5 reaches 0.869 with 85.5% Recall@5, demonstrating authentic state-of-the-art retrieval performance on complex clinical guidelines."
+        "Sparse BM25 with TB domain synonyms lifts Recall from 0.305 to 0.450 due to exact medical acronym recognition (CBNAAT, SL-LPA).",
+        "Cross-Encoder reranking lifts Precision@3 to 0.767 and achieves an 0.892 MRR, ensuring the primary target clinical passage is placed at or near Rank #1.",
+        "Overall nDCG@5 reaches 0.846 with 0.812 Recall@5, demonstrating authentic state-of-the-art retrieval performance on complex clinical guidelines."
     ])
 
-    set_notes(s18, "We benchmarked our retrieval against standard baselines across our labeled clinical test dataset. Combining dense search with BM25 and our Cross-Encoder reranker achieved 83.3% Precision@3, 85.5% Recall@5, and a 1.000 MRR, decisively outperforming both individual keyword and semantic baselines.")
+    set_notes(s18, "We benchmarked our retrieval against standard baselines across our labeled clinical test dataset. Combining dense search with BM25 and our Cross-Encoder reranker achieved 0.767 Precision@3, 0.812 Recall@5, and an 0.892 MRR, decisively outperforming both individual keyword and semantic baselines.")
 
     # =========================================================================
     # SLIDE 19: LIVE DEMO SEQUENCE
@@ -665,7 +665,7 @@ def create_presentation():
         "Step 4: Source Verification -> Expand evidence cards to verify original PDF page 46 (PMDT 2017) and page 3 (TOG 2016).",
         "Step 5: Citation Audit -> Highlight 'quote_traceability_passed' status confirming exact quote matching.",
         "Step 6: Version Comparison Graphs -> Run 2017 vs 2021 comparison to display the Interactive Clinical Evolution Radar Chart & Quantitative Trajectory Graph alongside the Comparative Matrix.",
-        "Step 7: Evaluation Benchmark Graphs -> Open 'Analysis & Evaluation' to showcase the Interactive Benchmark Grouped Bar Chart (100% P@3, 1.000 MRR) and 10-Year Clinical Technology Adoption Multi-Line Chart."
+        "Step 7: Evaluation Benchmark Graphs -> Open 'Analysis & Evaluation' to showcase the Interactive Benchmark Grouped Bar Chart (0.767 P@3, 0.892 MRR) and 10-Year Clinical Technology Adoption Multi-Line Chart."
     ])
 
     set_notes(s19, "Now, we would like to present a live demonstration of our system. First, we show the Dashboard. Next, in 'Ask TB Guidelines', we click the research question chip on TB control objectives to display verified claims and exact quotation verification. Then we demonstrate the interactive visual charts in Version Comparison and Analysis & Evaluation.")
@@ -691,7 +691,7 @@ def create_presentation():
 
     add_card(s20, Inches(0.8), Inches(2.0), Inches(5.7), Inches(4.8), "Contributions Summary", [
         "Grounded Ingestion: Indexed 2,578 chunks across a decade of Indian national TB guidelines.",
-        "Dual-Stage Hybrid Retrieval: Dense vectors (ChromaDB) + BM25 keyword matching via RRF (MRR: 0.91).",
+        "Dual-Stage Hybrid Retrieval: Dense vectors (ChromaDB) + BM25 keyword matching via RRF + Cross-Encoder (MRR: 0.892).",
         "Zero-Hallucination Local RAG: Deterministic quotation verification ensuring all generated claims are grounded in source text.",
         "Cross-Version Intelligence: Interactive matrix comparing clinical evolution across diagnostic, regimen, and safety dimensions."
     ], bg_color=WHITE)

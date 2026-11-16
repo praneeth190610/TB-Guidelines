@@ -177,9 +177,9 @@ def run_evaluation():
     print("\n" + "=" * 75)
     print("EVALUATION RESULTS SUMMARY")
     print("=" * 75)
-    print(f"Hybrid Retrieval   - P@3: {results['hybrid_retrieval']['precision_at_3']*100:.1f}%, MRR: {results['hybrid_retrieval']['mrr']:.3f}, nDCG@5: {results['hybrid_retrieval']['ndcg_at_5']:.3f}")
-    print(f"Semantic Only      - P@3: {results['semantic_only']['precision_at_3']*100:.1f}%, MRR: {results['semantic_only']['mrr']:.3f}, nDCG@5: {results['semantic_only']['ndcg_at_5']:.3f}")
-    print(f"Keyword (BM25)     - P@3: {results['keyword_only']['precision_at_3']*100:.1f}%, MRR: {results['keyword_only']['mrr']:.3f}, nDCG@5: {results['keyword_only']['ndcg_at_5']:.3f}")
+    print(f"Hybrid Retrieval   - P@3: {results['hybrid_retrieval']['precision_at_3']:.3f}, Recall@5: {results['hybrid_retrieval']['recall_at_5']:.3f}, MRR: {results['hybrid_retrieval']['mrr']:.3f}, nDCG@5: {results['hybrid_retrieval']['ndcg_at_5']:.3f}")
+    print(f"Semantic Only      - P@3: {results['semantic_only']['precision_at_3']:.3f}, Recall@5: {results['semantic_only']['recall_at_5']:.3f}, MRR: {results['semantic_only']['mrr']:.3f}, nDCG@5: {results['semantic_only']['ndcg_at_5']:.3f}")
+    print(f"Keyword (BM25)     - P@3: {results['keyword_only']['precision_at_3']:.3f}, Recall@5: {results['keyword_only']['recall_at_5']:.3f}, MRR: {results['keyword_only']['mrr']:.3f}, nDCG@5: {results['keyword_only']['ndcg_at_5']:.3f}")
     print(f"Results saved to: {RESULTS_FILE}")
     print("=" * 75)
 
