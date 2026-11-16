@@ -1,13 +1,13 @@
 {
-  "description": "Ground-truth evaluation benchmark for Intelligent TB Guideline Analysis (verified against official PDF coordinates)",
-  "version": "2.0",
+  "description": "Ground-truth evaluation benchmark for Intelligent TB Guideline Analysis (verified against official PDF chapters and clinical guidance sections)",
+  "version": "2.1",
   "queries": [
     {
       "id": "q1",
       "query": "What are the major objectives of PMDT under the National Strategic Plan?",
       "category": "Programme Objectives",
       "ground_truth": {
-        "2017": [15, 45, 46, 47],
+        "2017": [45, 46, 47],
         "2021": [13, 14],
         "2016": [3, 4]
       }
@@ -17,7 +17,7 @@
       "query": "What are the eligibility criteria for BPaLM treatment regimen?",
       "category": "Treatment Regimens",
       "ground_truth": {
-        "2025": [11, 25, 30, 31, 32, 33]
+        "2025": [30, 31, 32, 33]
       }
     },
     {
@@ -25,9 +25,8 @@
       "query": "What are the recommendations for baseline second-line LPA (SL-LPA) testing?",
       "category": "Diagnostics",
       "ground_truth": {
-        "2021": [60, 61, 65, 66],
-        "2025": [17, 18, 19, 20],
-        "2017": [21, 52, 53, 109]
+        "2021": [60, 65, 66],
+        "2017": [52, 53, 109]
       }
     },
     {
@@ -56,7 +55,7 @@
       "query": "What infection control measures are recommended to prevent TB transmission?",
       "category": "Infection Control",
       "ground_truth": {
-        "2017": [27, 46, 125, 195, 196],
+        "2017": [27, 46, 195, 196],
         "2021": [75, 76],
         "2016": [195, 196]
       }
@@ -66,8 +65,8 @@
       "query": "What are the recommendations for management of non-tuberculous mycobacteria NTM?",
       "category": "NTM Management",
       "ground_truth": {
-        "2021": [255, 256, 257],
-        "2017": [10, 91, 234, 235],
+        "2021": [256, 257],
+        "2017": [91, 234, 235],
         "2025": [40, 41]
       }
     },
@@ -86,7 +85,7 @@
       "query": "What newer drugs like Bedaquiline and Delamanid are recommended for drug-resistant TB?",
       "category": "Newer Drugs",
       "ground_truth": {
-        "2017": [10, 29, 75, 76, 78, 79],
+        "2017": [75, 76, 78, 79],
         "2021": [28, 29, 54, 55, 56],
         "2025": [31, 32]
       }
@@ -96,9 +95,9 @@
       "query": "What strategies are outlined for the prevention of drug-resistant tuberculosis?",
       "category": "Prevention Strategies",
       "ground_truth": {
-        "2017": [27, 43, 44, 45, 46],
+        "2017": [27, 44, 45, 46],
         "2016": [11, 12],
-        "2021": [40, 41, 42]
+        "2021": [41, 42]
       }
     }
   ]

@@ -1899,7 +1899,7 @@ elif page == "Analysis & Evaluation":
         mrr_val = f"{hr.get('mrr', 0.0):.3f}"
         ndcg_val = f"{hr.get('ndcg_at_5', 0.0):.3f}"
     else:
-        p3_val, r5_val, mrr_val, ndcg_val = "100.0%", "100.0%", "1.000", "1.000"
+        p3_val, r5_val, mrr_val, ndcg_val = "83.3%", "85.5%", "1.000", "0.869"
 
     for col, title, val, caption in zip(
         cols,

@@ -3,27 +3,27 @@
   "benchmark_queries_count": 10,
   "hybrid_retrieval": {
     "precision_at_1": 1.0,
-    "precision_at_3": 1.0,
-    "precision_at_5": 1.0,
-    "recall_at_5": 1.0,
+    "precision_at_3": 0.833,
+    "precision_at_5": 0.84,
+    "recall_at_5": 0.855,
     "mrr": 1.0,
-    "ndcg_at_5": 1.0
+    "ndcg_at_5": 0.869
   },
   "semantic_only": {
     "precision_at_1": 0.4,
     "precision_at_3": 0.433,
-    "precision_at_5": 0.5,
-    "recall_at_5": 0.4,
-    "mrr": 0.575,
-    "ndcg_at_5": 0.396
+    "precision_at_5": 0.395,
+    "recall_at_5": 0.305,
+    "mrr": 0.55,
+    "ndcg_at_5": 0.329
   },
   "keyword_only": {
-    "precision_at_1": 0.7,
-    "precision_at_3": 0.733,
-    "precision_at_5": 0.56,
-    "recall_at_5": 0.56,
-    "mrr": 0.833,
-    "ndcg_at_5": 0.613
+    "precision_at_1": 0.6,
+    "precision_at_3": 0.6,
+    "precision_at_5": 0.44,
+    "recall_at_5": 0.45,
+    "mrr": 0.733,
+    "ndcg_at_5": 0.501
   },
   "query_evaluations": [
     {
@@ -32,7 +32,6 @@
       "category": "Programme Objectives",
       "target_ground_truth": {
         "2017": [
-          15,
           45,
           46,
           47
@@ -69,8 +68,6 @@
       "category": "Treatment Regimens",
       "target_ground_truth": {
         "2025": [
-          11,
-          25,
           30,
           31,
           32,
@@ -86,12 +83,12 @@
       ],
       "hybrid_relevance": [
         1,
-        1,
-        1,
+        0,
+        0,
         1,
         1
       ],
-      "hybrid_precision_at_3": 1.0,
+      "hybrid_precision_at_3": 0.333,
       "hybrid_rr": 1.0
     },
     {
@@ -101,18 +98,10 @@
       "target_ground_truth": {
         "2021": [
           60,
-          61,
           65,
           66
         ],
-        "2025": [
-          17,
-          18,
-          19,
-          20
-        ],
         "2017": [
-          21,
           52,
           53,
           109
@@ -127,12 +116,12 @@
       ],
       "hybrid_relevance": [
         1,
+        0,
         1,
-        1,
-        1,
+        0,
         1
       ],
-      "hybrid_precision_at_3": 1.0,
+      "hybrid_precision_at_3": 0.667,
       "hybrid_rr": 1.0
     },
     {
@@ -225,7 +214,6 @@
         "2017": [
           27,
           46,
-          125,
           195,
           196
         ],
@@ -250,7 +238,7 @@
         1,
         1,
         1,
-        1
+        0
       ],
       "hybrid_precision_at_3": 1.0,
       "hybrid_rr": 1.0
@@ -261,12 +249,10 @@
       "category": "NTM Management",
       "target_ground_truth": {
         "2021": [
-          255,
           256,
           257
         ],
         "2017": [
-          10,
           91,
           234,
           235
@@ -285,12 +271,12 @@
       ],
       "hybrid_relevance": [
         1,
-        1,
+        0,
         1,
         1,
         1
       ],
-      "hybrid_precision_at_3": 1.0,
+      "hybrid_precision_at_3": 0.667,
       "hybrid_rr": 1.0
     },
     {
@@ -340,8 +326,6 @@
       "category": "Newer Drugs",
       "target_ground_truth": {
         "2017": [
-          10,
-          29,
           75,
           76,
           78,
@@ -369,11 +353,11 @@
       "hybrid_relevance": [
         1,
         1,
-        1,
-        1,
+        0,
+        0,
         1
       ],
-      "hybrid_precision_at_3": 1.0,
+      "hybrid_precision_at_3": 0.667,
       "hybrid_rr": 1.0
     },
     {
@@ -383,7 +367,6 @@
       "target_ground_truth": {
         "2017": [
           27,
-          43,
           44,
           45,
           46
@@ -393,7 +376,6 @@
           12
         ],
         "2021": [
-          40,
           41,
           42
         ]
