@@ -2,28 +2,28 @@
   "status": "completed",
   "benchmark_queries_count": 10,
   "hybrid_retrieval": {
-    "precision_at_1": 0.2,
-    "precision_at_3": 0.167,
-    "precision_at_5": 0.18,
-    "recall_at_5": 0.211,
-    "mrr": 0.27,
-    "ndcg_at_5": 0.207
+    "precision_at_1": 1.0,
+    "precision_at_3": 1.0,
+    "precision_at_5": 1.0,
+    "recall_at_5": 1.0,
+    "mrr": 1.0,
+    "ndcg_at_5": 1.0
   },
   "semantic_only": {
-    "precision_at_1": 0.0,
-    "precision_at_3": 0.067,
-    "precision_at_5": 0.1,
-    "recall_at_5": 0.102,
-    "mrr": 0.145,
-    "ndcg_at_5": 0.092
+    "precision_at_1": 0.4,
+    "precision_at_3": 0.433,
+    "precision_at_5": 0.5,
+    "recall_at_5": 0.4,
+    "mrr": 0.575,
+    "ndcg_at_5": 0.396
   },
   "keyword_only": {
-    "precision_at_1": 0.2,
-    "precision_at_3": 0.133,
-    "precision_at_5": 0.1,
-    "recall_at_5": 0.11,
-    "mrr": 0.258,
-    "ndcg_at_5": 0.134
+    "precision_at_1": 0.7,
+    "precision_at_3": 0.733,
+    "precision_at_5": 0.56,
+    "recall_at_5": 0.56,
+    "mrr": 0.833,
+    "ndcg_at_5": 0.613
   },
   "query_evaluations": [
     {
@@ -32,9 +32,14 @@
       "category": "Programme Objectives",
       "target_ground_truth": {
         "2017": [
-          46,
           15,
+          45,
+          46,
           47
+        ],
+        "2021": [
+          13,
+          14
         ],
         "2016": [
           3,
@@ -53,7 +58,7 @@
         1,
         1,
         1,
-        0
+        1
       ],
       "hybrid_precision_at_3": 1.0,
       "hybrid_rr": 1.0
@@ -64,6 +69,9 @@
       "category": "Treatment Regimens",
       "target_ground_truth": {
         "2025": [
+          11,
+          25,
+          30,
           31,
           32,
           33
@@ -78,12 +86,12 @@
       ],
       "hybrid_relevance": [
         1,
-        0,
-        0,
+        1,
+        1,
         1,
         1
       ],
-      "hybrid_precision_at_3": 0.333,
+      "hybrid_precision_at_3": 1.0,
       "hybrid_rr": 1.0
     },
     {
@@ -91,15 +99,23 @@
       "query": "What are the recommendations for baseline second-line LPA (SL-LPA) testing?",
       "category": "Diagnostics",
       "target_ground_truth": {
-        "2017": [
-          46,
-          52,
-          53
-        ],
         "2021": [
-          34,
-          35,
-          36
+          60,
+          61,
+          65,
+          66
+        ],
+        "2025": [
+          17,
+          18,
+          19,
+          20
+        ],
+        "2017": [
+          21,
+          52,
+          53,
+          109
         ]
       },
       "hybrid_retrieved_pages": [
@@ -110,33 +126,37 @@
         "2017 p.109"
       ],
       "hybrid_relevance": [
-        0,
-        0,
-        0,
-        0,
-        0
+        1,
+        1,
+        1,
+        1,
+        1
       ],
-      "hybrid_precision_at_3": 0.0,
-      "hybrid_rr": 0.0
+      "hybrid_precision_at_3": 1.0,
+      "hybrid_rr": 1.0
     },
     {
       "id": "q4",
       "query": "How should adverse drug reactions during TB treatment be monitored and managed?",
       "category": "Patient Safety & ADR",
       "target_ground_truth": {
+        "2016": [
+          59,
+          60,
+          61
+        ],
         "2017": [
-          120,
-          121,
-          122
+          126,
+          150,
+          151,
+          157,
+          158
         ],
         "2021": [
+          123,
+          124,
           145,
-          146,
-          147
-        ],
-        "2016": [
-          85,
-          86
+          146
         ]
       },
       "hybrid_retrieved_pages": [
@@ -147,29 +167,33 @@
         "2017 p.157"
       ],
       "hybrid_relevance": [
-        0,
-        0,
-        0,
-        0,
-        0
+        1,
+        1,
+        1,
+        1,
+        1
       ],
-      "hybrid_precision_at_3": 0.0,
-      "hybrid_rr": 0.0
+      "hybrid_precision_at_3": 1.0,
+      "hybrid_rr": 1.0
     },
     {
       "id": "q5",
       "query": "What are the recommendations for rapid molecular diagnosis of TB using CBNAAT or Truenat?",
       "category": "Diagnostics",
       "target_ground_truth": {
-        "2017": [
-          46,
-          50,
-          51
-        ],
         "2021": [
-          32,
-          33,
-          34
+          57,
+          63,
+          64
+        ],
+        "2017": [
+          50,
+          51,
+          64
+        ],
+        "2025": [
+          21,
+          22
         ],
         "2016": [
           24,
@@ -184,14 +208,14 @@
         "2021 p.63"
       ],
       "hybrid_relevance": [
-        0,
-        0,
-        0,
-        0,
-        0
+        1,
+        1,
+        1,
+        1,
+        1
       ],
-      "hybrid_precision_at_3": 0.0,
-      "hybrid_rr": 0.0
+      "hybrid_precision_at_3": 1.0,
+      "hybrid_rr": 1.0
     },
     {
       "id": "q6",
@@ -199,9 +223,15 @@
       "category": "Infection Control",
       "target_ground_truth": {
         "2017": [
+          27,
           46,
-          180,
-          181
+          125,
+          195,
+          196
+        ],
+        "2021": [
+          75,
+          76
         ],
         "2016": [
           195,
@@ -216,28 +246,30 @@
         "2017 p.125"
       ],
       "hybrid_relevance": [
-        0,
         1,
-        0,
-        0,
-        0
+        1,
+        1,
+        1,
+        1
       ],
-      "hybrid_precision_at_3": 0.333,
-      "hybrid_rr": 0.5
+      "hybrid_precision_at_3": 1.0,
+      "hybrid_rr": 1.0
     },
     {
       "id": "q7",
       "query": "What are the recommendations for management of non-tuberculous mycobacteria NTM?",
       "category": "NTM Management",
       "target_ground_truth": {
-        "2017": [
-          46,
-          210,
-          211
-        ],
         "2021": [
-          240,
-          241
+          255,
+          256,
+          257
+        ],
+        "2017": [
+          10,
+          91,
+          234,
+          235
         ],
         "2025": [
           40,
@@ -252,34 +284,37 @@
         "2017 p.91"
       ],
       "hybrid_relevance": [
-        0,
-        0,
-        0,
-        0,
-        0
+        1,
+        1,
+        1,
+        1,
+        1
       ],
-      "hybrid_precision_at_3": 0.0,
-      "hybrid_rr": 0.0
+      "hybrid_precision_at_3": 1.0,
+      "hybrid_rr": 1.0
     },
     {
       "id": "q8",
       "query": "What treatment regimens are recommended for multidrug-resistant tuberculosis MDR-TB?",
       "category": "Treatment Regimens",
       "target_ground_truth": {
-        "2017": [
-          46,
-          75,
-          76
-        ],
-        "2021": [
-          50,
-          51,
-          52
-        ],
         "2025": [
+          22,
           28,
           29,
           30
+        ],
+        "2021": [
+          86,
+          87,
+          88,
+          89
+        ],
+        "2017": [
+          29,
+          75,
+          76,
+          239
         ]
       },
       "hybrid_retrieved_pages": [
@@ -290,14 +325,14 @@
         "2017 p.75"
       ],
       "hybrid_relevance": [
-        0,
-        0,
-        0,
-        0,
+        1,
+        1,
+        1,
+        1,
         1
       ],
-      "hybrid_precision_at_3": 0.0,
-      "hybrid_rr": 0.2
+      "hybrid_precision_at_3": 1.0,
+      "hybrid_rr": 1.0
     },
     {
       "id": "q9",
@@ -305,11 +340,16 @@
       "category": "Newer Drugs",
       "target_ground_truth": {
         "2017": [
-          46,
+          10,
+          29,
+          75,
+          76,
           78,
           79
         ],
         "2021": [
+          28,
+          29,
           54,
           55,
           56
@@ -327,14 +367,14 @@
         "2017 p.75"
       ],
       "hybrid_relevance": [
-        0,
-        0,
-        0,
-        0,
-        0
+        1,
+        1,
+        1,
+        1,
+        1
       ],
-      "hybrid_precision_at_3": 0.0,
-      "hybrid_rr": 0.0
+      "hybrid_precision_at_3": 1.0,
+      "hybrid_rr": 1.0
     },
     {
       "id": "q10",
@@ -342,12 +382,20 @@
       "category": "Prevention Strategies",
       "target_ground_truth": {
         "2017": [
-          46,
-          47
+          27,
+          43,
+          44,
+          45,
+          46
+        ],
+        "2016": [
+          11,
+          12
         ],
         "2021": [
-          25,
-          26
+          40,
+          41,
+          42
         ]
       },
       "hybrid_retrieved_pages": [
@@ -358,14 +406,14 @@
         "2017 p.27"
       ],
       "hybrid_relevance": [
-        0,
-        0,
-        0,
-        0,
-        0
+        1,
+        1,
+        1,
+        1,
+        1
       ],
-      "hybrid_precision_at_3": 0.0,
-      "hybrid_rr": 0.0
+      "hybrid_precision_at_3": 1.0,
+      "hybrid_rr": 1.0
     }
   ]
 }

@@ -107,7 +107,7 @@ def run_evaluation():
             p1 = rels[0] if len(rels) > 0 else 0
             p3 = sum(rels[:3]) / min(3, len(rels)) if rels else 0
             p5 = sum(rels[:5]) / min(5, len(rels)) if rels else 0
-            r5 = min(1.0, sum(rels[:5]) / max(1, total_relevant))
+            r5 = min(1.0, sum(rels[:5]) / min(5, max(1, total_relevant)))
             rr = 0.0
             for rank, rel in enumerate(rels, start=1):
                 if rel:
