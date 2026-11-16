@@ -1124,18 +1124,42 @@ def render_version_comparison_graphs(old_year, new_year, topic, old_results, new
         ))
         fig_radar.update_layout(
             polar=dict(
-                radialaxis=dict(visible=True, range=[0, 100], ticksuffix="%", gridcolor="#E2EFEA"),
-                angularaxis=dict(gridcolor="#E2EFEA", tickfont=dict(size=11, family="Inter, sans-serif")),
-                bgcolor="rgba(247, 250, 249, 0.6)"
+                radialaxis=dict(
+                    visible=True,
+                    range=[0, 100],
+                    ticksuffix="%",
+                    gridcolor="#D5E0DC",
+                    tickfont=dict(color="#142B3B", size=10, family="Inter, Arial, sans-serif")
+                ),
+                angularaxis=dict(
+                    gridcolor="#D5E0DC",
+                    tickfont=dict(size=12, color="#142B3B", family="Inter, Arial, sans-serif")
+                ),
+                bgcolor="#F8FBFA"
             ),
-            title=f"<b>Clinical Dimension Radar: {old_year} vs {new_year}</b>",
-            title_font=dict(size=15, color="#142B3B", family="Inter, sans-serif"),
-            legend=dict(orientation="h", yanchor="bottom", y=-0.22, xanchor="center", x=0.5),
-            margin=dict(l=40, r=40, t=45, b=45),
-            height=390,
-            paper_bgcolor="rgba(0,0,0,0)"
+            title=dict(
+                text=f"<b>Clinical Dimension Radar: {old_year} vs {new_year}</b>",
+                font=dict(size=15, color="#142B3B", family="Inter, Arial, sans-serif"),
+                x=0.01,
+                y=0.98
+            ),
+            font=dict(color="#142B3B", family="Inter, Arial, sans-serif"),
+            legend=dict(
+                orientation="h",
+                yanchor="top",
+                y=-0.18,
+                xanchor="center",
+                x=0.5,
+                font=dict(color="#142B3B", size=12, family="Inter, Arial, sans-serif"),
+                bgcolor="rgba(255, 255, 255, 0.95)",
+                bordercolor="#B0D7D0",
+                borderwidth=1
+            ),
+            margin=dict(l=40, r=40, t=50, b=80),
+            height=420,
+            paper_bgcolor="#FFFFFF"
         )
-        st.plotly_chart(fig_radar, use_container_width=True)
+        st.plotly_chart(fig_radar, use_container_width=True, theme=None)
 
     with g_col2:
         # Grouped Bar Chart for Key Clinical Parameters
@@ -1161,6 +1185,7 @@ def render_version_comparison_graphs(old_year, new_year, topic, old_results, new
             y=old_bar_vals,
             marker_color="#142B3B",
             text=old_text,
+            textfont=dict(color="#142B3B", size=11, family="Inter, Arial, sans-serif"),
             textposition="outside",
             hovertemplate="<b>%{x}</b><br>" + str(old_year) + ": %{text}<extra></extra>"
         ))
@@ -1170,22 +1195,47 @@ def render_version_comparison_graphs(old_year, new_year, topic, old_results, new
             y=new_bar_vals,
             marker_color="#287C78",
             text=new_text,
+            textfont=dict(color="#142B3B", size=11, family="Inter, Arial, sans-serif"),
             textposition="outside",
             hovertemplate="<b>%{x}</b><br>" + str(new_year) + ": %{text}<extra></extra>"
         ))
         fig_bar.update_layout(
             barmode="group",
-            title=f"<b>Quantitative Clinical Parameters: {old_year} vs {new_year}</b>",
-            title_font=dict(size=15, color="#142B3B", family="Inter, sans-serif"),
-            xaxis=dict(tickfont=dict(size=11, family="Inter, sans-serif")),
-            yaxis=dict(title="Value / Percentage", gridcolor="#EBF1EF"),
-            legend=dict(orientation="h", yanchor="bottom", y=-0.22, xanchor="center", x=0.5),
-            margin=dict(l=40, r=40, t=45, b=45),
-            height=390,
-            paper_bgcolor="rgba(0,0,0,0)",
-            plot_bgcolor="rgba(247, 250, 249, 0.5)"
+            title=dict(
+                text=f"<b>Quantitative Clinical Parameters: {old_year} vs {new_year}</b>",
+                font=dict(size=15, color="#142B3B", family="Inter, Arial, sans-serif"),
+                x=0.01,
+                y=0.98
+            ),
+            font=dict(color="#142B3B", family="Inter, Arial, sans-serif"),
+            xaxis=dict(
+                tickfont=dict(size=11, color="#142B3B", family="Inter, Arial, sans-serif"),
+                linecolor="#B0D7D0",
+                gridcolor="#EBF1EF"
+            ),
+            yaxis=dict(
+                title=dict(text="Value / Percentage", font=dict(color="#142B3B", size=12)),
+                tickfont=dict(size=11, color="#142B3B", family="Inter, Arial, sans-serif"),
+                linecolor="#B0D7D0",
+                gridcolor="#EBF1EF"
+            ),
+            legend=dict(
+                orientation="h",
+                yanchor="top",
+                y=-0.18,
+                xanchor="center",
+                x=0.5,
+                font=dict(color="#142B3B", size=12, family="Inter, Arial, sans-serif"),
+                bgcolor="rgba(255, 255, 255, 0.95)",
+                bordercolor="#B0D7D0",
+                borderwidth=1
+            ),
+            margin=dict(l=40, r=40, t=50, b=80),
+            height=420,
+            paper_bgcolor="#FFFFFF",
+            plot_bgcolor="#F8FBFA"
         )
-        st.plotly_chart(fig_bar, use_container_width=True)
+        st.plotly_chart(fig_bar, use_container_width=True, theme=None)
 
     # Chart 3: Evidence Passage Cross-Encoder Score Profile
     if old_results or new_results:
@@ -1218,161 +1268,40 @@ def render_version_comparison_graphs(old_year, new_year, topic, old_results, new
             title=f"Cross-Encoder Semantic Relevance Scores for Topic: '{topic}'"
         )
         fig_scores.update_layout(
-            title_font=dict(size=14, color="#142B3B", family="Inter, sans-serif"),
-            paper_bgcolor="rgba(0,0,0,0)",
-            plot_bgcolor="rgba(247, 250, 249, 0.5)",
-            margin=dict(l=30, r=30, t=40, b=30),
-            height=280
+            title=dict(
+                text=f"<b>Cross-Encoder Semantic Relevance Scores for: '{topic}'</b>",
+                font=dict(size=14, color="#142B3B", family="Inter, Arial, sans-serif"),
+                x=0.01,
+                y=0.98
+            ),
+            font=dict(color="#142B3B", family="Inter, Arial, sans-serif"),
+            xaxis=dict(
+                tickfont=dict(size=11, color="#142B3B", family="Inter, Arial, sans-serif"),
+                linecolor="#B0D7D0"
+            ),
+            yaxis=dict(
+                title=dict(text="Cross-Encoder Score", font=dict(color="#142B3B", size=12)),
+                tickfont=dict(size=11, color="#142B3B", family="Inter, Arial, sans-serif"),
+                gridcolor="#EBF1EF",
+                linecolor="#B0D7D0"
+            ),
+            legend=dict(
+                orientation="h",
+                yanchor="top",
+                y=-0.22,
+                xanchor="center",
+                x=0.5,
+                font=dict(color="#142B3B", size=11, family="Inter, Arial, sans-serif"),
+                bgcolor="rgba(255, 255, 255, 0.95)",
+                bordercolor="#B0D7D0",
+                borderwidth=1
+            ),
+            paper_bgcolor="#FFFFFF",
+            plot_bgcolor="#F8FBFA",
+            margin=dict(l=40, r=30, t=50, b=80),
+            height=320
         )
-        st.plotly_chart(fig_scores, use_container_width=True)
-
-
-def render_evaluation_graphs(eval_data, term_freq_data):
-    """
-    Renders interactive Plotly graph representations for Analysis & Evaluation:
-    1. Retrieval Strategy Benchmark Bar Chart (Hybrid vs Keyword vs Semantic)
-    2. 10-Year Clinical Technology & Drug Adoption Multi-Line/Area Chart
-    3. Query-by-Query Retrieval Precision Chart across 10 Benchmark Queries
-    """
-    if not eval_data:
-        return
-
-    # 1. Strategy Benchmark Chart
-    metrics_keys = [
-        ("precision_at_1", "Precision@1"),
-        ("precision_at_3", "Precision@3"),
-        ("precision_at_5", "Precision@5"),
-        ("recall_at_5", "Recall@5"),
-        ("mrr", "MRR (Mean Reciprocal Rank)"),
-        ("ndcg_at_5", "nDCG@5 (Ranking Quality)")
-    ]
-
-    x_labels = [m[1] for m in metrics_keys]
-    hr = eval_data.get("hybrid_retrieval", {})
-    kw = eval_data.get("keyword_only", {})
-    sm = eval_data.get("semantic_only", {})
-
-    hybrid_vals = [hr.get(m[0], 1.0) * 100 for m in metrics_keys]
-    kw_vals = [kw.get(m[0], 0.0) * 100 for m in metrics_keys]
-    sm_vals = [sm.get(m[0], 0.0) * 100 for m in metrics_keys]
-
-    fig_strategy = go.Figure()
-    fig_strategy.add_trace(go.Bar(
-        name="Hybrid RAG (Semantic + BM25 + Cross-Encoder)",
-        x=x_labels,
-        y=hybrid_vals,
-        marker_color="#142B3B",
-        text=[f"{v:.1f}%" for v in hybrid_vals],
-        textposition="outside",
-        hovertemplate="<b>%{x}</b><br>Hybrid RAG: %{y:.1f}%<extra></extra>"
-    ))
-    fig_strategy.add_trace(go.Bar(
-        name="Keyword Only (BM25 with Synonyms)",
-        x=x_labels,
-        y=kw_vals,
-        marker_color="#287C78",
-        text=[f"{v:.1f}%" for v in kw_vals],
-        textposition="outside",
-        hovertemplate="<b>%{x}</b><br>Keyword Only: %{y:.1f}%<extra></extra>"
-    ))
-    fig_strategy.add_trace(go.Bar(
-        name="Semantic Only (all-MiniLM-L6-v2)",
-        x=x_labels,
-        y=sm_vals,
-        marker_color="#E07A5F",
-        text=[f"{v:.1f}%" for v in sm_vals],
-        textposition="outside",
-        hovertemplate="<b>%{x}</b><br>Semantic Only: %{y:.1f}%<extra></extra>"
-    ))
-
-    fig_strategy.update_layout(
-        barmode="group",
-        title="<b>Information Retrieval Benchmark: Hybrid RAG vs. Keyword & Semantic Baselines</b>",
-        title_font=dict(size=16, color="#142B3B", family="Inter, sans-serif"),
-        xaxis=dict(title="", tickfont=dict(size=11, family="Inter, sans-serif")),
-        yaxis=dict(title="Retrieval Score (%)", range=[0, 118], gridcolor="#EBF1EF"),
-        legend=dict(orientation="h", yanchor="bottom", y=1.02, xanchor="right", x=1),
-        paper_bgcolor="rgba(0,0,0,0)",
-        plot_bgcolor="rgba(247,250,249,0.5)",
-        margin=dict(l=40, r=40, t=60, b=40),
-        height=420
-    )
-    st.plotly_chart(fig_strategy, use_container_width=True)
-
-    # 2. 10-Year Clinical Technology & Drug Adoption Trajectory Chart
-    years = ["2016 TOG", "2017 PMDT", "2021 PMDT", "2025 National Guidelines"]
-    trajectories = {
-        "Bedaquiline (BDQ)": [7, 47, 139, 24],
-        "BPaLM Regimen": [0, 0, 0, 124],
-        "CBNAAT / GeneXpert": [45, 110, 20, 2],
-        "Truenat Micro-PCR": [0, 0, 26, 0],
-        "Delamanid (DLM)": [0, 10, 20, 5],
-        "Nikshay Surveillance": [10, 162, 306, 3]
-    }
-    colors = ["#287C78", "#E07A5F", "#142B3B", "#3AAFA9", "#D9822B", "#4A6FA5"]
-
-    fig_timeline = go.Figure()
-    for (term, counts), col in zip(trajectories.items(), colors):
-        fig_timeline.add_trace(go.Scatter(
-            x=years,
-            y=counts,
-            name=term,
-            mode="lines+markers",
-            line=dict(color=col, width=3, shape="spline"),
-            marker=dict(size=8, symbol="circle"),
-            hovertemplate="<b>" + term + "</b><br>%{x}: %{y} occurrences<extra></extra>"
-        ))
-
-    fig_timeline.update_layout(
-        title="<b>10-Year Clinical Technology & Drug Adoption Trajectory (2016-2025)</b>",
-        title_font=dict(size=16, color="#142B3B", family="Inter, sans-serif"),
-        xaxis=dict(gridcolor="#EBF1EF", tickfont=dict(size=12, family="Inter, sans-serif")),
-        yaxis=dict(title="Word Occurrences in Guidelines", gridcolor="#EBF1EF"),
-        legend=dict(orientation="h", yanchor="bottom", y=1.02, xanchor="right", x=1),
-        paper_bgcolor="rgba(0,0,0,0)",
-        plot_bgcolor="rgba(247,250,249,0.5)",
-        margin=dict(l=40, r=40, t=60, b=40),
-        height=400
-    )
-    st.plotly_chart(fig_timeline, use_container_width=True)
-
-    # 3. Query-by-Query Precision Breakdown
-    queries_eval = eval_data.get("query_evaluations", [])
-    if queries_eval:
-        q_ids = [f"Q{i+1}: {q.get('category', 'Query')[:18]}" for i, q in enumerate(queries_eval)]
-        p3_scores = [q.get("hybrid_precision_at_3", 1.0) * 100 for q in queries_eval]
-        rr_scores = [q.get("hybrid_rr", 1.0) * 100 for q in queries_eval]
-
-        fig_q = go.Figure()
-        fig_q.add_trace(go.Bar(
-            name="Precision@3 (%)",
-            x=q_ids,
-            y=p3_scores,
-            marker_color="#287C78",
-            text=[f"{v:.0f}%" for v in p3_scores],
-            textposition="outside"
-        ))
-        fig_q.add_trace(go.Bar(
-            name="Reciprocal Rank (%)",
-            x=q_ids,
-            y=rr_scores,
-            marker_color="#142B3B",
-            text=[f"{v:.0f}%" for v in rr_scores],
-            textposition="outside"
-        ))
-        fig_q.update_layout(
-            barmode="group",
-            title="<b>Benchmark Query-by-Query Retrieval Precision & First-Hit Rank (All 10 Categories)</b>",
-            title_font=dict(size=15, color="#142B3B", family="Inter, sans-serif"),
-            xaxis=dict(tickangle=-25, tickfont=dict(size=10, family="Inter, sans-serif")),
-            yaxis=dict(title="Score (%)", range=[0, 120], gridcolor="#EBF1EF"),
-            legend=dict(orientation="h", yanchor="bottom", y=1.02, xanchor="right", x=1),
-            paper_bgcolor="rgba(0,0,0,0)",
-            plot_bgcolor="rgba(247,250,249,0.5)",
-            margin=dict(l=40, r=40, t=60, b=60),
-            height=380
-        )
-        st.plotly_chart(fig_q, use_container_width=True)
+        st.plotly_chart(fig_scores, use_container_width=True, theme=None)
 
 
 # =========================================================
@@ -2033,6 +1962,7 @@ elif page == "Analysis & Evaluation":
             y=hybrid_vals,
             marker_color="#142B3B",
             text=[f"{v:.1f}%" for v in hybrid_vals],
+            textfont=dict(color="#142B3B", size=11, family="Inter, Arial, sans-serif"),
             textposition="outside",
             hovertemplate="<b>%{x}</b><br>Hybrid RAG: %{y:.1f}%<extra></extra>"
         ))
@@ -2042,6 +1972,7 @@ elif page == "Analysis & Evaluation":
             y=kw_vals,
             marker_color="#287C78",
             text=[f"{v:.1f}%" for v in kw_vals],
+            textfont=dict(color="#142B3B", size=11, family="Inter, Arial, sans-serif"),
             textposition="outside",
             hovertemplate="<b>%{x}</b><br>Keyword Only: %{y:.1f}%<extra></extra>"
         ))
@@ -2049,25 +1980,52 @@ elif page == "Analysis & Evaluation":
             name="Semantic Only (all-MiniLM-L6-v2)",
             x=x_labels,
             y=sm_vals,
-            marker_color="#E07A5F",
+            marker_color="#D9822B",
             text=[f"{v:.1f}%" for v in sm_vals],
+            textfont=dict(color="#142B3B", size=11, family="Inter, Arial, sans-serif"),
             textposition="outside",
             hovertemplate="<b>%{x}</b><br>Semantic Only: %{y:.1f}%<extra></extra>"
         ))
 
         fig_strategy.update_layout(
             barmode="group",
-            title="<b>Information Retrieval Benchmark: Hybrid RAG vs. Keyword & Semantic Baselines</b>",
-            title_font=dict(size=16, color="#142B3B", family="Inter, sans-serif"),
-            xaxis=dict(title="", tickfont=dict(size=11, family="Inter, sans-serif")),
-            yaxis=dict(title="Retrieval Score (%)", range=[0, 118], gridcolor="#EBF1EF"),
-            legend=dict(orientation="h", yanchor="bottom", y=1.02, xanchor="right", x=1),
-            paper_bgcolor="rgba(0,0,0,0)",
-            plot_bgcolor="rgba(247,250,249,0.5)",
-            margin=dict(l=40, r=40, t=60, b=40),
-            height=420
+            title=dict(
+                text="<b>Information Retrieval Benchmark: Hybrid RAG vs. Keyword & Semantic Baselines</b>",
+                font=dict(size=16, color="#142B3B", family="Inter, Arial, sans-serif"),
+                x=0.01,
+                y=0.98
+            ),
+            font=dict(color="#142B3B", family="Inter, Arial, sans-serif"),
+            xaxis=dict(
+                title="",
+                tickfont=dict(size=12, color="#142B3B", family="Inter, Arial, sans-serif"),
+                linecolor="#B0D7D0",
+                gridcolor="#EBF1EF"
+            ),
+            yaxis=dict(
+                title=dict(text="Retrieval Score (%)", font=dict(color="#142B3B", size=12)),
+                range=[0, 118],
+                tickfont=dict(size=11, color="#142B3B", family="Inter, Arial, sans-serif"),
+                linecolor="#B0D7D0",
+                gridcolor="#EBF1EF"
+            ),
+            legend=dict(
+                orientation="h",
+                yanchor="top",
+                y=-0.18,
+                xanchor="center",
+                x=0.5,
+                font=dict(color="#142B3B", size=12, family="Inter, Arial, sans-serif"),
+                bgcolor="rgba(255, 255, 255, 0.95)",
+                bordercolor="#B0D7D0",
+                borderwidth=1
+            ),
+            paper_bgcolor="#FFFFFF",
+            plot_bgcolor="#F8FBFA",
+            margin=dict(l=50, r=30, t=50, b=90),
+            height=460
         )
-        st.plotly_chart(fig_strategy, use_container_width=True)
+        st.plotly_chart(fig_strategy, use_container_width=True, theme=None)
 
         st.markdown("#### 📋 Empirical Retrieval Benchmark Metrics Table")
         comp_df = pd.DataFrame([
@@ -2115,6 +2073,7 @@ elif page == "Analysis & Evaluation":
                 y=p3_scores,
                 marker_color="#287C78",
                 text=[f"{v:.0f}%" for v in p3_scores],
+                textfont=dict(color="#142B3B", size=10, family="Inter, Arial, sans-serif"),
                 textposition="outside"
             ))
             fig_q.add_trace(go.Bar(
@@ -2123,21 +2082,47 @@ elif page == "Analysis & Evaluation":
                 y=rr_scores,
                 marker_color="#142B3B",
                 text=[f"{v:.0f}%" for v in rr_scores],
+                textfont=dict(color="#142B3B", size=10, family="Inter, Arial, sans-serif"),
                 textposition="outside"
             ))
             fig_q.update_layout(
                 barmode="group",
-                title="<b>Benchmark Query-by-Query Retrieval Precision & First-Hit Rank (All 10 Categories)</b>",
-                title_font=dict(size=15, color="#142B3B", family="Inter, sans-serif"),
-                xaxis=dict(tickangle=-25, tickfont=dict(size=10, family="Inter, sans-serif")),
-                yaxis=dict(title="Score (%)", range=[0, 120], gridcolor="#EBF1EF"),
-                legend=dict(orientation="h", yanchor="bottom", y=1.02, xanchor="right", x=1),
-                paper_bgcolor="rgba(0,0,0,0)",
-                plot_bgcolor="rgba(247,250,249,0.5)",
-                margin=dict(l=40, r=40, t=60, b=60),
-                height=380
+                title=dict(
+                    text="<b>Benchmark Query-by-Query Retrieval Precision & First-Hit Rank (All 10 Categories)</b>",
+                    font=dict(size=15, color="#142B3B", family="Inter, Arial, sans-serif"),
+                    x=0.01,
+                    y=0.98
+                ),
+                font=dict(color="#142B3B", family="Inter, Arial, sans-serif"),
+                xaxis=dict(
+                    tickangle=-25,
+                    tickfont=dict(size=10, color="#142B3B", family="Inter, Arial, sans-serif"),
+                    linecolor="#B0D7D0"
+                ),
+                yaxis=dict(
+                    title=dict(text="Score (%)", font=dict(color="#142B3B", size=12)),
+                    range=[0, 120],
+                    tickfont=dict(size=10, color="#142B3B", family="Inter, Arial, sans-serif"),
+                    gridcolor="#EBF1EF",
+                    linecolor="#B0D7D0"
+                ),
+                legend=dict(
+                    orientation="h",
+                    yanchor="top",
+                    y=-0.28,
+                    xanchor="center",
+                    x=0.5,
+                    font=dict(color="#142B3B", size=11, family="Inter, Arial, sans-serif"),
+                    bgcolor="rgba(255, 255, 255, 0.95)",
+                    bordercolor="#B0D7D0",
+                    borderwidth=1
+                ),
+                paper_bgcolor="#FFFFFF",
+                plot_bgcolor="#F8FBFA",
+                margin=dict(l=50, r=30, t=50, b=100),
+                height=420
             )
-            st.plotly_chart(fig_q, use_container_width=True)
+            st.plotly_chart(fig_q, use_container_width=True, theme=None)
 
     section_heading(
         "TOPIC & INTERVENTION EVOLUTION",
@@ -2165,22 +2150,46 @@ elif page == "Analysis & Evaluation":
             name=term,
             mode="lines+markers",
             line=dict(color=col, width=3, shape="spline"),
-            marker=dict(size=8, symbol="circle"),
+            marker=dict(size=9, symbol="circle"),
             hovertemplate="<b>" + term + "</b><br>%{x}: %{y} occurrences<extra></extra>"
         ))
 
     fig_timeline.update_layout(
-        title="<b>10-Year Clinical Technology & Drug Adoption Trajectory (2016-2025)</b>",
-        title_font=dict(size=16, color="#142B3B", family="Inter, sans-serif"),
-        xaxis=dict(gridcolor="#EBF1EF", tickfont=dict(size=12, family="Inter, sans-serif")),
-        yaxis=dict(title="Word Occurrences in Guidelines", gridcolor="#EBF1EF"),
-        legend=dict(orientation="h", yanchor="bottom", y=1.02, xanchor="right", x=1),
-        paper_bgcolor="rgba(0,0,0,0)",
-        plot_bgcolor="rgba(247,250,249,0.5)",
-        margin=dict(l=40, r=40, t=60, b=40),
-        height=400
+        title=dict(
+            text="<b>10-Year Clinical Technology & Drug Adoption Trajectory (2016-2025)</b>",
+            font=dict(size=16, color="#142B3B", family="Inter, Arial, sans-serif"),
+            x=0.01,
+            y=0.98
+        ),
+        font=dict(color="#142B3B", family="Inter, Arial, sans-serif"),
+        xaxis=dict(
+            tickfont=dict(size=12, color="#142B3B", family="Inter, Arial, sans-serif"),
+            linecolor="#B0D7D0",
+            gridcolor="#EBF1EF"
+        ),
+        yaxis=dict(
+            title=dict(text="Word Occurrences in Guidelines", font=dict(color="#142B3B", size=12)),
+            tickfont=dict(size=11, color="#142B3B", family="Inter, Arial, sans-serif"),
+            linecolor="#B0D7D0",
+            gridcolor="#EBF1EF"
+        ),
+        legend=dict(
+            orientation="h",
+            yanchor="top",
+            y=-0.18,
+            xanchor="center",
+            x=0.5,
+            font=dict(color="#142B3B", size=11, family="Inter, Arial, sans-serif"),
+            bgcolor="rgba(255, 255, 255, 0.95)",
+            bordercolor="#B0D7D0",
+            borderwidth=1
+        ),
+        paper_bgcolor="#FFFFFF",
+        plot_bgcolor="#F8FBFA",
+        margin=dict(l=50, r=30, t=50, b=90),
+        height=450
     )
-    st.plotly_chart(fig_timeline, use_container_width=True)
+    st.plotly_chart(fig_timeline, use_container_width=True, theme=None)
 
     st.markdown("#### 📋 Corpus Clinical Concept Occurrence Frequencies")
     st.dataframe(pd.DataFrame(term_freq_data), width="stretch", hide_index=True)
