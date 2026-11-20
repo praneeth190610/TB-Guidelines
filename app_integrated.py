@@ -1063,17 +1063,18 @@ def generate_comparison_analysis(old_year, new_year, topic, old_results, new_res
     return rows
 
 
-def render_version_comparison_graphs(old_year, new_year, topic, old_results, new_results):
+def render_yearly_edition_graphs(old_year, new_year):
     """
-    Renders rich interactive Plotly graph representations for Guideline Version Comparison:
-    1. Multi-Dimensional Clinical Modernization Radar Chart (Diagnostic, Regimen, Oral, UDST, Safety)
-    2. Quantitative Clinical Parameter Comparison (Duration, Injections, Novel Drugs, UDST Target)
-    3. Evidence Passage Cross-Encoder Score & Distribution
+    Renders rich interactive Plotly graphical representations comparing two guideline editions:
+    1. Dynamic Clinical Delta KPI Cards (Duration, Injections, Novel Drugs, UDST)
+    2. Multi-Dimensional Clinical Modernization Radar Chart (Diagnostic, Regimen, Oral, UDST, Safety)
+    3. Quantitative Clinical Parameter Comparison (Duration, Injections, Novel Drugs, UDST Target)
+    4. 10-Year National Clinical Roadmap Trajectory (Highlighting the two selected editions)
     """
     section_heading(
         "CROSS-VERSION VISUAL COMPARISON & TRAJECTORY",
         f"Multi-Dimensional Clinical Graph Analysis: {old_year} vs {new_year}",
-        "Interactive visual graph representations comparing guideline maturity, quantitative clinical metrics, and retrieved evidence strength."
+        "Interactive visual graph representations comparing guideline maturity, quantitative clinical metrics, and multi-year shifts."
     )
 
     DIMENSION_NAMES = [
@@ -1095,6 +1096,47 @@ def render_version_comparison_graphs(old_year, new_year, topic, old_results, new
         "2021": {"duration": 18, "injections": 0, "novel_drugs": 4, "udst_pct": 90},
         "2025": {"duration": 6, "injections": 0, "novel_drugs": 5, "udst_pct": 100}
     }
+
+    old_q = QUANT_METRICS.get(str(old_year), {"duration": 20, "injections": 12, "novel_drugs": 2, "udst_pct": 50})
+    new_q = QUANT_METRICS.get(str(new_year), {"duration": 12, "injections": 0, "novel_drugs": 4, "udst_pct": 95})
+
+    # 1. KPI Comparison Cards
+    kpi1, kpi2, kpi3, kpi4 = st.columns(4)
+    with kpi1:
+        dur_delta = new_q["duration"] - old_q["duration"]
+        dur_caption = f"{dur_delta:+d} months" if dur_delta != 0 else "Baseline duration"
+        metric_card(
+            "Treatment Duration",
+            f"{old_q['duration']} ➔ {new_q['duration']} mo",
+            dur_caption
+        )
+
+    with kpi2:
+        inj_delta = new_q["injections"] - old_q["injections"]
+        inj_caption = "All-Oral Regimen (0 inj)" if new_q["injections"] == 0 else f"{inj_delta:+d} weeks"
+        metric_card(
+            "Injectable Phase",
+            f"{old_q['injections']} ➔ {new_q['injections']} wks",
+            inj_caption
+        )
+
+    with kpi3:
+        drug_delta = new_q["novel_drugs"] - old_q["novel_drugs"]
+        drug_caption = f"+{drug_delta} authorized drugs" if drug_delta > 0 else "Baseline formulary"
+        metric_card(
+            "Novel Oral Drugs",
+            f"{old_q['novel_drugs']} ➔ {new_q['novel_drugs']} drugs",
+            drug_caption
+        )
+
+    with kpi4:
+        udst_delta = new_q["udst_pct"] - old_q["udst_pct"]
+        udst_caption = f"+{udst_delta}% diagnostic coverage" if udst_delta > 0 else "Target maintained"
+        metric_card(
+            "UDST Coverage Target",
+            f"{old_q['udst_pct']}% ➔ {new_q['udst_pct']}%",
+            udst_caption
+        )
 
     old_s = YEAR_SCORES.get(str(old_year), [50, 50, 50, 50, 50])
     new_s = YEAR_SCORES.get(str(new_year), [80, 80, 80, 80, 80])
@@ -1163,9 +1205,6 @@ def render_version_comparison_graphs(old_year, new_year, topic, old_results, new
 
     with g_col2:
         # Grouped Bar Chart for Key Clinical Parameters
-        old_q = QUANT_METRICS.get(str(old_year), {"duration": 20, "injections": 12, "novel_drugs": 2, "udst_pct": 50})
-        new_q = QUANT_METRICS.get(str(new_year), {"duration": 12, "injections": 0, "novel_drugs": 4, "udst_pct": 95})
-
         cat_names = [
             "Max Duration<br>(Months)",
             "Injectable Phase<br>(Weeks)",
@@ -1237,7 +1276,83 @@ def render_version_comparison_graphs(old_year, new_year, topic, old_results, new
         )
         st.plotly_chart(fig_bar, use_container_width=True, theme=None)
 
-    # Chart 3: Evidence Passage Cross-Encoder Score Profile
+    # Chart 3: 10-Year Clinical Policy Trajectory Roadmap
+    years_list = ["2016 TOG", "2017 PMDT", "2021 PMDT", "2025 National"]
+    udst_pcts = [25, 65, 90, 100]
+    oral_indices = [20, 45, 80, 100]
+    durations = [24, 24, 18, 6]
+
+    fig_road = go.Figure()
+    fig_road.add_trace(go.Scatter(
+        x=years_list,
+        y=udst_pcts,
+        name="Universal DST Target (%)",
+        mode="lines+markers",
+        line=dict(color="#287C78", width=3, shape="spline"),
+        marker=dict(size=10, symbol="circle"),
+        hovertemplate="<b>Universal DST Coverage</b><br>%{x}: %{y}%<extra></extra>"
+    ))
+    fig_road.add_trace(go.Scatter(
+        x=years_list,
+        y=oral_indices,
+        name="All-Oral Regimen Transition Index (%)",
+        mode="lines+markers",
+        line=dict(color="#E07A5F", width=3, shape="spline"),
+        marker=dict(size=10, symbol="diamond"),
+        hovertemplate="<b>All-Oral Transition Index</b><br>%{x}: %{y}%<extra></extra>"
+    ))
+    fig_road.add_trace(go.Scatter(
+        x=years_list,
+        y=durations,
+        name="Standard Treatment Duration (Months)",
+        mode="lines+markers",
+        line=dict(color="#142B3B", width=3, dash="dot", shape="spline"),
+        marker=dict(size=10, symbol="square"),
+        hovertemplate="<b>Treatment Duration</b><br>%{x}: %{y} months<extra></extra>"
+    ))
+
+    fig_road.update_layout(
+        title=dict(
+            text=f"<b>10-Year National Clinical Roadmap Trajectory (2016-2025) — Comparing: {old_year} vs {new_year}</b>",
+            font=dict(size=15, color="#142B3B", family="Inter, Arial, sans-serif"),
+            x=0.01,
+            y=0.98
+        ),
+        font=dict(color="#142B3B", family="Inter, Arial, sans-serif"),
+        xaxis=dict(
+            tickfont=dict(size=11, color="#142B3B", family="Inter, Arial, sans-serif"),
+            linecolor="#B0D7D0",
+            gridcolor="#EBF1EF"
+        ),
+        yaxis=dict(
+            title=dict(text="Percentage (%) / Duration (Months)", font=dict(color="#142B3B", size=12, family="Inter, Arial, sans-serif")),
+            tickfont=dict(size=11, color="#142B3B", family="Inter, Arial, sans-serif"),
+            linecolor="#B0D7D0",
+            gridcolor="#EBF1EF"
+        ),
+        legend=dict(
+            orientation="h",
+            yanchor="top",
+            y=-0.22,
+            xanchor="center",
+            x=0.5,
+            font=dict(color="#142B3B", size=11, family="Inter, Arial, sans-serif"),
+            bgcolor="rgba(255, 255, 255, 0.95)",
+            bordercolor="#B0D7D0",
+            borderwidth=1
+        ),
+        paper_bgcolor="#FFFFFF",
+        plot_bgcolor="#F8FBFA",
+        margin=dict(l=40, r=30, t=50, b=90),
+        height=360
+    )
+    st.plotly_chart(fig_road, use_container_width=True, theme=None)
+
+
+def render_topic_evidence_score_graph(old_year, new_year, topic, old_results, new_results):
+    """
+    Renders cross-encoder semantic relevance score profile for topic comparison.
+    """
     if old_results or new_results:
         st.markdown("#### 📊 Retrieved Evidence Passage Relevance & Score Distribution")
         score_data = []
@@ -1302,6 +1417,11 @@ def render_version_comparison_graphs(old_year, new_year, topic, old_results, new
             height=320
         )
         st.plotly_chart(fig_scores, use_container_width=True, theme=None)
+
+
+def render_version_comparison_graphs(old_year, new_year, topic, old_results, new_results):
+    render_yearly_edition_graphs(old_year, new_year)
+    render_topic_evidence_score_graph(old_year, new_year, topic, old_results, new_results)
 
 
 # =========================================================
@@ -1646,51 +1766,65 @@ elif page == "Version Comparison":
             index=2
         )
 
-    st.markdown("**Suggested Comparison Topics:**")
-    topic_suggestions = [
-        "Rapid molecular testing and second-line LPA",
-        "Bedaquiline and shorter MDR-TB regimens",
-        "Infection control measures for preventing TB transmission",
-        "Management of non-tuberculous mycobacteria NTM",
-        "BPaLM eligibility criteria and pretomanid"
-    ]
-    sug_cols = st.columns(len(topic_suggestions))
-    for i, col in enumerate(sug_cols):
-        with col:
-            if st.button(f"📌 {topic_suggestions[i][:22]}...", key=f"sug_{i}"):
-                st.session_state["comparison_topic"] = topic_suggestions[i]
-
-    topic_val = st.session_state.get("comparison_topic", "")
-
-    topic = st.text_input(
-        "Comparison topic or research question",
-        value=topic_val,
-        placeholder="Example: Rapid molecular testing, Bedaquiline eligibility, adverse reactions..."
-    )
-
-    _, pre_version = load_precomputed_caches()
-    if "version_cache" not in st.session_state:
-        st.session_state["version_cache"] = dict(pre_version)
+    if old_year == new_year:
+        st.warning("Please select two different guideline versions for comparison.")
     else:
-        for k, v in pre_version.items():
-            if k not in st.session_state["version_cache"]:
-                st.session_state["version_cache"][k] = v
+        # 1. ALWAYS-ON GRAPHICAL REPRESENTATIONS COMPARING THE TWO YEARS
+        render_yearly_edition_graphs(old_year, new_year)
 
-    if st.button(
-        "⇄  Compare Guideline Versions",
-        width="stretch"
-    ):
+        st.markdown("---")
+        section_heading(
+            "TOPIC-SPECIFIC EVIDENCE RETRIEVAL & SYNTHESIS",
+            f"Evidence-Grounded Recommendation Synthesis: {old_year} vs {new_year}",
+            "Retrieve and synthesize specific clinical passages between the two selected editions."
+        )
 
-        if old_year == new_year:
-            st.warning("Please select two different guideline versions.")
+        st.markdown("**Suggested Comparison Topics:**")
+        topic_suggestions = [
+            "Rapid molecular testing and second-line LPA",
+            "Bedaquiline and shorter MDR-TB regimens",
+            "Infection control measures for preventing TB transmission",
+            "Management of non-tuberculous mycobacteria NTM",
+            "BPaLM eligibility criteria and pretomanid"
+        ]
+        sug_cols = st.columns(len(topic_suggestions))
+        for i, col in enumerate(sug_cols):
+            with col:
+                if st.button(f"📌 {topic_suggestions[i][:22]}...", key=f"sug_{i}"):
+                    st.session_state["comparison_topic"] = topic_suggestions[i]
+                    st.session_state["active_comp_key"] = f"{old_year}|{new_year}|{topic_suggestions[i].strip().lower()}"
 
-        elif not topic.strip():
-            st.warning(
-                "Please enter a clinical topic to compare."
-            )
+        topic_val = st.session_state.get("comparison_topic", "")
 
+        topic = st.text_input(
+            "Comparison topic or research question",
+            value=topic_val,
+            placeholder="Example: Rapid molecular testing, Bedaquiline eligibility, adverse reactions..."
+        )
+
+        _, pre_version = load_precomputed_caches()
+        if "version_cache" not in st.session_state:
+            st.session_state["version_cache"] = dict(pre_version)
         else:
-            comp_key = f"{old_year}|{new_year}|{topic.strip().lower()}"
+            for k, v in pre_version.items():
+                if k not in st.session_state["version_cache"]:
+                    st.session_state["version_cache"][k] = v
+
+        comp_btn = st.button(
+            "⇄  Compare Guideline Evidence",
+            width="stretch"
+        )
+        if comp_btn:
+            if not topic.strip():
+                st.warning("Please enter a clinical topic to compare.")
+            else:
+                st.session_state["active_comp_key"] = f"{old_year}|{new_year}|{topic.strip().lower()}"
+
+        active_key = st.session_state.get("active_comp_key")
+        current_key = f"{old_year}|{new_year}|{topic.strip().lower()}"
+
+        if (comp_btn or active_key == current_key) and topic.strip():
+            comp_key = current_key
             cached_data = st.session_state["version_cache"].get(comp_key)
 
             if cached_data:
@@ -1738,7 +1872,8 @@ elif page == "Version Comparison":
                 st.markdown(f"#### 📘 {new_year} Guideline Evidence ({len(new_results)} passages)")
                 render_evidence_cards(new_results)
 
-            render_version_comparison_graphs(old_year, new_year, topic.strip(), old_results, new_results)
+            # Topic-specific evidence passage score distribution chart
+            render_topic_evidence_score_graph(old_year, new_year, topic.strip(), old_results, new_results)
 
             section_heading(
                 "CROSS-VERSION COMPARATIVE MATRIX",
