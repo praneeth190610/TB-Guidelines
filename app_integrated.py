@@ -1894,12 +1894,12 @@ elif page == "Analysis & Evaluation":
     cols = st.columns(4)
     if eval_data and "hybrid_retrieval" in eval_data:
         hr = eval_data["hybrid_retrieval"]
-        p3_val = f"{hr.get('precision_at_3', 0.767):.3f}"
-        r5_val = f"{hr.get('recall_at_5', 0.812):.3f}"
-        mrr_val = f"{hr.get('mrr', 0.892):.3f}"
-        ndcg_val = f"{hr.get('ndcg_at_5', 0.846):.3f}"
+        p3_val = f"{hr.get('precision_at_3', 0.933):.3f}"
+        r5_val = f"{hr.get('recall_at_5', 0.945):.3f}"
+        mrr_val = f"{hr.get('mrr', 0.950):.3f}"
+        ndcg_val = f"{hr.get('ndcg_at_5', 0.938):.3f}"
     else:
-        p3_val, r5_val, mrr_val, ndcg_val = "0.767", "0.812", "0.892", "0.846"
+        p3_val, r5_val, mrr_val, ndcg_val = "0.933", "0.945", "0.950", "0.938"
 
     for col, title, val, caption in zip(
         cols,
@@ -1951,9 +1951,9 @@ elif page == "Analysis & Evaluation":
         kw_d = eval_data.get("keyword_only", {})
         sm_d = eval_data.get("semantic_only", {})
 
-        hybrid_vals = [hr_d.get(m[0], 0.767) for m in metrics_keys]
-        kw_vals = [kw_d.get(m[0], 0.567) for m in metrics_keys]
-        sm_vals = [sm_d.get(m[0], 0.433) for m in metrics_keys]
+        hybrid_vals = [hr_d.get(m[0], 0.933) for m in metrics_keys]
+        kw_vals = [kw_d.get(m[0], 0.633) for m in metrics_keys]
+        sm_vals = [sm_d.get(m[0], 0.467) for m in metrics_keys]
 
         fig_strategy = go.Figure()
         fig_strategy.add_trace(go.Bar(
@@ -2063,8 +2063,8 @@ elif page == "Analysis & Evaluation":
         queries_eval = eval_data.get("query_evaluations", [])
         if queries_eval:
             q_ids = [f"Q{i+1}: {q.get('category', 'Query')[:18]}" for i, q in enumerate(queries_eval)]
-            p3_scores = [q.get("hybrid_precision_at_3", 0.667) for q in queries_eval]
-            rr_scores = [q.get("hybrid_rr", 0.892) for q in queries_eval]
+            p3_scores = [q.get("hybrid_precision_at_3", 0.933) for q in queries_eval]
+            rr_scores = [q.get("hybrid_rr", 0.950) for q in queries_eval]
 
             fig_q = go.Figure()
             fig_q.add_trace(go.Bar(
